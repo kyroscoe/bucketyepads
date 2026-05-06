@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" fill="none">
+<rect width="1200" height="840" rx="48" fill="#eeeeef"/>
+<rect x="720" y="40" width="320" height="70" rx="18" fill="#c9c8cd"/>
+<rect x="845" y="0" width="60" height="140" rx="12" fill="#898991"/>
+<rect x="690" y="120" width="400" height="230" rx="60" fill="#fafafa" stroke="#86868e" stroke-width="14"/>
+<rect x="140" y="420" width="720" height="120" rx="45" fill="#fefefe" stroke="#b4b3b9" stroke-width="10"/>
+<rect x="260" y="370" width="480" height="110" rx="38" fill="#c7342e"/>
+<rect x="120" y="530" width="820" height="54" rx="20" fill="#d0cfd4"/>
+<rect x="170" y="584" width="40" height="170" rx="18" fill="#92929a"/>
+<rect x="770" y="584" width="40" height="170" rx="18" fill="#92929a"/>
+<rect x="940" y="250" width="60" height="500" rx="16" fill="#97979f"/>
+<circle cx="1020" cy="150" r="42" fill="#86868e"/>
+<path d="M280 230C360 110 520 90 620 150" stroke="#d0cfd4" stroke-width="28" stroke-linecap="round"/>
+<rect x="0" y="0" width="1200" height="840" rx="48" fill="url(#g)"/>
+<defs><linearGradient id="g" x1="0" y1="0" x2="1200" y2="840" gradientUnits="userSpaceOnUse"><stop stop-color="#2b2b31" stop-opacity="0.18"/><stop offset="1" stop-color="#2b2b31" stop-opacity="0"/></linearGradient></defs>
+</svg>
