@@ -24,9 +24,7 @@ export default function ContactPage() {
                 <br />
                 {company.addressLine2}
               </p>
-              <p>Main: {company.phone}</p>
-              <p>Office: {company.officePhone}</p>
-              <p>Toll Free: {company.tollFree}</p>
+              <p>Phone: {company.phone}</p>
               <p>Email: {company.email}</p>
               <p>{company.hours}</p>
             </div>
