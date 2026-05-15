@@ -946,23 +946,6 @@
         "Fabricated components",
         "Custom assemblies"
       ]
-    },
-    {
-      "slug": "knitted-wire-mesh",
-      "name": "Knitted Wire Mesh",
-      "short": "Fabricated knitted wire mesh components including demister pads and oil mist filters.",
-      "description": "A separate capability that broadens the company’s manufacturing base beyond laundry and dry cleaning textiles.",
-      "image": "/images/categories/wire-mesh.svg",
-      "bullets": [
-        "Demister pads",
-        "Oil mist filters",
-        "Fabricated wire mesh components"
-      ],
-      "applications": [
-        "Industrial filtration",
-        "Mist elimination",
-        "Custom mesh assemblies"
-      ]
     }
   ],
   "contactPage": {
@@ -1008,8 +991,8 @@
   },
   "distributorsPage": {
     "noDistributorTemplate": "No local distributor is listed for {state}. Contact customer service for product support and ordering help.",
-    "customerServiceTitle": "FH Bonn Customer Service",
-    "contactButtonLabel": "Contact FH Bonn",
+    "customerServiceTitle": "Buckeye Pads & Covers Customer Service",
+    "contactButtonLabel": "Contact Buckeye Pads & Covers",
     "heroDescription": "Find authorized Buckeye Pads & Covers distributors by state. If your state does not have a listed distributor, contact FH Bonn customer service directly.",
     "phoneLabel": "Phone",
     "supportTitle": "Distributor Support",
