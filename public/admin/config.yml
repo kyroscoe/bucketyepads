@@ -155,7 +155,6 @@ collections:
               - { label: Hero Description, name: heroDescription, widget: text }
               - { label: Support Title, name: supportTitle, widget: string }
               - { label: Support Description, name: supportDescription, widget: text }
-              - { label: Fallback States Label, name: fallbackStatesLabel, widget: string }
               - { label: Customer Service Label, name: customerServiceLabel, widget: string }
               - { label: Phone Label, name: phoneLabel, widget: string }
               - { label: Contact Button Label, name: contactButtonLabel, widget: string }

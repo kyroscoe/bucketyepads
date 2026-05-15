@@ -991,8 +991,7 @@
     "heroDescription": "Find authorized Buckeye Pads & Covers distributors by state. If your state does not have a listed distributor, contact FH Bonn customer service directly.",
     "phoneLabel": "Phone",
     "supportTitle": "Distributor Support",
-    "supportDescription": "This directory includes {count} distributor listings across the United States. States without a local listing route directly to FH Bonn customer service.",
-    "fallbackStatesLabel": "Fallback States",
+    "supportDescription": "This directory includes {count} distributor listings across the United States. If you cannot find a distributor near you, contact us for product support and ordering help.",
     "customerServiceLabel": "Customer Service",
     "heroTitle": "Find a Distributor"
   },

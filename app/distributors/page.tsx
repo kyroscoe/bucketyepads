@@ -4,7 +4,6 @@ import { PageHero } from '@/components/PageHero';
 import { company, distributorStates, siteData } from '@/components/site-data';
 
 const distributorCount = distributorStates.reduce((total, state) => total + state.distributors.length, 0);
-const fallbackStateCount = distributorStates.filter((state) => state.distributors.length === 0).length;
 
 function phoneHref(phone: string) {
   return `tel:${phone.replace(/[^\d+]/g, '')}`;
@@ -28,10 +27,6 @@ export default function DistributorsPage() {
             </p>
             <dl className="mt-6 grid gap-4 border-y border-slate-200 py-6">
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.fallbackStatesLabel}</dt>
-                <dd className="mt-1 text-2xl font-black text-brand-navy">{fallbackStateCount}</dd>
-              </div>
-              <div>
                 <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.customerServiceLabel}</dt>
                 <dd className="mt-1 text-sm font-bold text-brand-navy">
                   <a className="transition hover:text-brand-red" href={`mailto:${company.email}`}>
@@ -42,8 +37,8 @@ export default function DistributorsPage() {
               <div>
                 <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.phoneLabel}</dt>
                 <dd className="mt-1 text-sm font-bold text-brand-navy">
-                  <a className="transition hover:text-brand-red" href={phoneHref(company.tollFree)}>
-                    {company.tollFree}
+                  <a className="transition hover:text-brand-red" href={phoneHref(company.phone)}>
+                    {company.phone}
                   </a>
                 </dd>
               </div>
