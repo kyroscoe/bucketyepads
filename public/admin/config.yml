@@ -1,0 +1,244 @@
+backend:
+  name: git-gateway
+  branch: main
+
+local_backend: true
+
+media_folder: public/images/uploads
+public_folder: /images/uploads
+
+collections:
+  - name: settings
+    label: Site Content
+    files:
+      - name: site
+        label: Website Content
+        file: content/site.json
+        format: json
+        fields:
+          - label: Metadata
+            name: metadata
+            widget: object
+            fields:
+              - { label: Browser Title, name: title, widget: string }
+              - { label: Search Description, name: description, widget: text }
+
+          - label: Navigation
+            name: navLinks
+            widget: list
+            summary: "{{fields.label}}"
+            fields:
+              - { label: Label, name: label, widget: string }
+              - { label: URL, name: href, widget: string }
+
+          - label: Company Info
+            name: company
+            widget: object
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Tagline, name: tagline, widget: string }
+              - { label: Logo, name: logo, widget: image, required: false }
+              - { label: Logo Alt Text, name: logoAlt, widget: string }
+              - { label: Email, name: email, widget: string }
+              - { label: Main Phone, name: phone, widget: string }
+              - { label: Office Phone, name: officePhone, widget: string, required: false }
+              - { label: Toll Free, name: tollFree, widget: string, required: false }
+              - { label: Hours, name: hours, widget: string }
+              - { label: Address Line 1, name: addressLine1, widget: string }
+              - { label: Address Line 2, name: addressLine2, widget: string }
+
+          - label: Home Page
+            name: home
+            widget: object
+            fields:
+              - label: Hero
+                name: hero
+                widget: object
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Primary Button Label, name: primaryCtaLabel, widget: string }
+                  - { label: Primary Button URL, name: primaryCtaHref, widget: string }
+                  - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string }
+                  - { label: Secondary Button URL, name: secondaryCtaHref, widget: string }
+                  - { label: Image, name: image, widget: image, required: false }
+                  - { label: Image Alt Text, name: imageAlt, widget: string }
+                  - label: Stats
+                    name: stats
+                    widget: list
+                    summary: "{{fields.value}} {{fields.label}}"
+                    fields:
+                      - { label: Value, name: value, widget: string }
+                      - { label: Label, name: label, widget: string }
+              - label: About Section
+                name: about
+                widget: object
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Highlights, name: highlights, widget: list, field: { label: Highlight, name: highlight, widget: string } }
+              - label: Products Section
+                name: products
+                widget: object
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: Industries Section
+                name: industries
+                widget: object
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+              - label: Distributor CTA
+                name: distributorCta
+                widget: object
+                fields:
+                  - { label: Eyebrow, name: eyebrow, widget: string }
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: Card Title, name: cardTitle, widget: string }
+                  - { label: Card Description, name: cardDescription, widget: text }
+                  - { label: Primary Button Label, name: primaryCtaLabel, widget: string }
+                  - { label: Primary Button URL, name: primaryCtaHref, widget: string }
+                  - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string }
+                  - { label: Secondary Button URL, name: secondaryCtaHref, widget: string }
+
+          - label: About Page
+            name: aboutPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - { label: Eyebrow, name: eyebrow, widget: string }
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Body Paragraphs, name: body, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - label: Stats
+                name: stats
+                widget: list
+                summary: "{{fields.value}}"
+                fields:
+                  - { label: Value, name: value, widget: string }
+                  - { label: Label, name: label, widget: string }
+
+          - label: Resources Page
+            name: resourcesPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+
+          - label: Contact Page
+            name: contactPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - { label: Contact Card Title, name: cardTitle, widget: string }
+
+          - label: Request Quote Page
+            name: requestQuotePage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text, required: false }
+
+          - label: Distributors Page
+            name: distributorsPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - { label: Support Title, name: supportTitle, widget: string }
+              - { label: Support Description, name: supportDescription, widget: text }
+              - { label: Fallback States Label, name: fallbackStatesLabel, widget: string }
+              - { label: Customer Service Label, name: customerServiceLabel, widget: string }
+              - { label: Phone Label, name: phoneLabel, widget: string }
+              - { label: Contact Button Label, name: contactButtonLabel, widget: string }
+              - { label: No Distributor Card Title, name: customerServiceTitle, widget: string }
+              - { label: No Distributor Text, name: noDistributorTemplate, widget: text }
+
+          - label: Footer
+            name: footer
+            widget: object
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Quick Links Title, name: quickLinksTitle, widget: string }
+              - { label: Contact Title, name: contactTitle, widget: string }
+
+          - label: Quote Form
+            name: quoteForm
+            widget: object
+            fields:
+              - { label: Form Action URL, name: action, widget: string }
+              - label: Labels and Placeholders
+                name: fields
+                widget: object
+                fields:
+                  - { label: Name Label, name: nameLabel, widget: string }
+                  - { label: Name Placeholder, name: namePlaceholder, widget: string }
+                  - { label: Company Label, name: companyLabel, widget: string }
+                  - { label: Company Placeholder, name: companyPlaceholder, widget: string }
+                  - { label: Email Label, name: emailLabel, widget: string }
+                  - { label: Email Placeholder, name: emailPlaceholder, widget: string }
+                  - { label: Phone Label, name: phoneLabel, widget: string }
+                  - { label: Phone Placeholder, name: phonePlaceholder, widget: string }
+                  - { label: Product Category Label, name: productCategoryLabel, widget: string }
+                  - { label: Machine Model Label, name: machineModelLabel, widget: string }
+                  - { label: Machine Model Placeholder, name: machineModelPlaceholder, widget: string }
+                  - { label: Project Details Label, name: projectDetailsLabel, widget: string }
+                  - { label: Project Details Placeholder, name: projectDetailsPlaceholder, widget: text }
+                  - { label: Submit Button Label, name: submitLabel, widget: string }
+              - { label: Product Category Options, name: productCategoryOptions, widget: list, field: { label: Option, name: option, widget: string } }
+
+          - label: Product Categories
+            name: productCategories
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Slug, name: slug, widget: string }
+              - { label: Name, name: name, widget: string }
+              - { label: Short Description, name: short, widget: text }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+              - { label: Bullets, name: bullets, widget: list, field: { label: Bullet, name: bullet, widget: string } }
+              - { label: Applications, name: applications, widget: list, field: { label: Application, name: application, widget: string } }
+
+          - label: Industries
+            name: industries
+            widget: list
+            summary: "{{fields.name}}"
+            fields:
+              - { label: Name, name: name, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: Image, name: image, widget: image, required: false }
+
+          - label: Resources
+            name: resourceLinks
+            widget: list
+            summary: "{{fields.title}}"
+            fields:
+              - { label: Title, name: title, widget: string }
+              - { label: Description, name: description, widget: text }
+              - { label: URL, name: href, widget: string }
+
+          - label: Distributor States
+            name: distributorStates
+            widget: list
+            summary: "{{fields.state}}"
+            fields:
+              - { label: State, name: state, widget: string }
+              - label: Distributors
+                name: distributors
+                widget: list
+                required: false
+                summary: "{{fields.name}}"
+                fields:
+                  - { label: Name, name: name, widget: string }
+                  - { label: City, name: city, widget: string }
+                  - { label: Phone, name: phone, widget: string }

@@ -1,14 +1,16 @@
 import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { PageHero } from '@/components/PageHero';
-import { resourceLinks } from '@/components/site-data';
+import { resourceLinks, siteData } from '@/components/site-data';
 
 export default function ResourcesPage() {
+  const { resourcesPage } = siteData;
+
   return (
     <main>
       <PageHero
-        title="Resources"
-        description="A resources page keeps catalogs, videos, and ordering help organized instead of scattering them across the site."
+        title={resourcesPage.heroTitle}
+        description={resourcesPage.heroDescription}
       />
       <section className="py-20">
         <Container className="grid gap-6 md:grid-cols-2">

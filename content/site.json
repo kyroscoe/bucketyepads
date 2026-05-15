@@ -1,0 +1,1158 @@
+{
+  "metadata": {
+    "title": "Buckeye Pads & Covers | Industrial Press Pads & Covers",
+    "description": "Redesigned marketing site for a dry cleaning pads and covers manufacturer."
+  },
+  "navLinks": [
+    {
+      "href": "/",
+      "label": "Home"
+    },
+    {
+      "href": "/distributors",
+      "label": "Distributors"
+    },
+    {
+      "href": "/about",
+      "label": "About"
+    },
+    {
+      "href": "/resources",
+      "label": "Resources"
+    },
+    {
+      "href": "/contact",
+      "label": "Contact"
+    }
+  ],
+  "company": {
+    "name": "Buckeye Pads & Covers",
+    "tagline": "Industrial Press Pads & Covers",
+    "logo": "/images/logo-current.png",
+    "logoAlt": "Buckeye Pads and Covers",
+    "email": "customerservice@fhbonn.com",
+    "phone": "(937) 323-7024",
+    "officePhone": "(937) 462-5148",
+    "tollFree": "1.800.323.0143",
+    "hours": "Monday – Friday 8:00 AM – 5:00 PM EST",
+    "addressLine1": "338 W Columbus Rd",
+    "addressLine2": "South Charleston, OH 45368"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Made in the USA",
+      "title": "Industrial Press Pads & Covers for Dry Cleaning and Laundry Equipment",
+      "description": "A cleaner, more professional experience for distributors, equipment manufacturers, and commercial operators who need the right fit fast.",
+      "primaryCtaLabel": "Request Quote",
+      "primaryCtaHref": "/request-quote",
+      "secondaryCtaLabel": "Find a Distributor",
+      "secondaryCtaHref": "/distributors",
+      "image": "/images/logo-current.png",
+      "imageAlt": "Illustration of a commercial press with pad",
+      "stats": [
+        {
+          "value": "3000+",
+          "label": "catalog items"
+        },
+        {
+          "value": "55+",
+          "label": "OEM programs"
+        },
+        {
+          "value": "1947",
+          "label": "founded"
+        }
+      ]
+    },
+    "about": {
+      "eyebrow": "About Buckeye Pads & Covers",
+      "title": "Reliable pads and covers for commercial finishing equipment",
+      "description": "Buckeye Pads & Covers manufactures replacement pads, covers, head plates, and custom textile products for dry cleaning, laundry, and industrial equipment.",
+      "highlights": [
+        "OEM and aftermarket products",
+        "3,000+ catalog items",
+        "Custom fabrication available",
+        "Distributor support nationwide"
+      ]
+    },
+    "products": {
+      "eyebrow": "Products",
+      "title": "Find the right product for your equipment",
+      "description": "Browse organized product categories for dry cleaning, laundry, pressing, finishing, and industrial applications."
+    },
+    "industries": {
+      "eyebrow": "Industries",
+      "title": "Serving the industries that depend on quality finishing products",
+      "description": "Buckeye Pads & Covers supports dry cleaners, laundries, equipment manufacturers, distributors, and industrial customers."
+    },
+    "distributorCta": {
+      "eyebrow": "Find a distributor",
+      "title": "Get the products you need through a trusted distributor",
+      "description": "Buckeye Pads & Covers works with distributors to help customers find the right pads, covers, and replacement products for their equipment.",
+      "cardTitle": "Need help finding the right product?",
+      "cardDescription": "Request a quote or contact a distributor for help matching products to your equipment, application, and replacement needs.",
+      "primaryCtaLabel": "Request a Quote",
+      "primaryCtaHref": "/request-quote",
+      "secondaryCtaLabel": "Find a Distributor",
+      "secondaryCtaHref": "/distributors"
+    }
+  },
+  "aboutPage": {
+    "heroTitle": "About Buckeye Pads & Covers",
+    "heroDescription": "Buckeye Pads & Covers has been manufacturing quality pads, covers, head plates, and textile products for the dry cleaning, laundry, and industrial markets for decades.",
+    "eyebrow": "Our History",
+    "title": "A trusted manufacturer serving the industry since 1947",
+    "description": "Founded by Francis Henry Bonn, the company has built a long-standing reputation for dependable products, consistent quality, and industry knowledge.",
+    "body": [
+      "Buckeye Pads & Covers manufactures replacement pads, covers, head plates, and specialty textile products for commercial finishing equipment used throughout the dry cleaning and laundry industries.",
+      "In addition to standard catalog products, the company supports OEM manufacturing programs and custom fabrication projects for distributors, equipment manufacturers, and industrial customers across the United States.",
+      "With decades of manufacturing experience, Buckeye Pads & Covers continues to focus on reliable products, responsive customer support, and long-term distributor relationships."
+    ],
+    "stats": [
+      {
+        "value": "1947",
+        "label": "Founded by Francis Henry Bonn"
+      },
+      {
+        "value": "2018",
+        "label": "FH Bonn purchased by Darrin Bonn and Tim Kephart"
+      },
+      {
+        "value": "3,000+",
+        "label": "Catalog products available"
+      },
+      {
+        "value": "OEM",
+        "label": "OEM and aftermarket manufacturing support"
+      },
+      {
+        "value": "USA",
+        "label": "Manufactured with American craftsmanship and experience"
+      }
+    ]
+  },
+  "resourcesPage": {
+    "heroTitle": "Resources",
+    "heroDescription": "A resources page keeps catalogs, videos, and ordering help organized instead of scattering them across the site."
+  },
+  "contactPage": {
+    "heroTitle": "Contact",
+    "heroDescription": "Contact us with any questions or concerns.",
+    "cardTitle": "Contact Info"
+  },
+  "requestQuotePage": {
+    "heroTitle": "Request a Quote",
+    "heroDescription": ""
+  },
+  "distributorsPage": {
+    "heroTitle": "Find a Distributor",
+    "heroDescription": "Find authorized Buckeye Pads & Covers distributors by state. If your state does not have a listed distributor, contact FH Bonn customer service directly.",
+    "supportTitle": "Distributor Support",
+    "supportDescription": "This directory includes {count} distributor listings across the United States. States without a local listing route directly to FH Bonn customer service.",
+    "fallbackStatesLabel": "Fallback States",
+    "customerServiceLabel": "Customer Service",
+    "phoneLabel": "Phone",
+    "contactButtonLabel": "Contact FH Bonn",
+    "customerServiceTitle": "FH Bonn Customer Service",
+    "noDistributorTemplate": "No local distributor is listed for {state}. Contact customer service for product support and ordering help."
+  },
+  "footer": {
+    "title": "Over 70 Years of Manufacturing Experience",
+    "description": "Buckeye Pads & Covers supports distributors, commercial cleaners, and equipment manufacturers with pads, covers, fabrication support, and specialized textile manufacturing.",
+    "quickLinksTitle": "Quick Links",
+    "contactTitle": "Contact"
+  },
+  "quoteForm": {
+    "action": "https://formspree.io/f/xdabwnlr",
+    "fields": {
+      "nameLabel": "Name",
+      "namePlaceholder": "Your name",
+      "companyLabel": "Company",
+      "companyPlaceholder": "Company name",
+      "emailLabel": "Email",
+      "emailPlaceholder": "you@company.com",
+      "phoneLabel": "Phone",
+      "phonePlaceholder": "Phone number",
+      "productCategoryLabel": "Product Category",
+      "machineModelLabel": "Machine Make / Model",
+      "machineModelPlaceholder": "Ajax, Sankosha, Unipress, etc.",
+      "projectDetailsLabel": "Project Details",
+      "projectDetailsPlaceholder": "Tell us what you need, quantities, timing, and any spec details.",
+      "submitLabel": "Submit Request"
+    },
+    "productCategoryOptions": [
+      "Dry Cleaning Pads",
+      "Laundry Pads & Covers",
+      "Steel & Texsteel Pads",
+      "Roll Goods & Fabrics",
+      "Industrial Sewing",
+      "Knitted Wire Mesh",
+      "Not sure yet"
+    ]
+  },
+  "productCategories": [
+    {
+      "slug": "dry-cleaning-pads",
+      "name": "Dry Cleaning Pads",
+      "short": "Precision-fit pads and covers for dry cleaning presses and finishing equipment.",
+      "description": "Built for clean finishing, long service life, and reliable fit across major machine makes and models.",
+      "image": "/images/categories/dry-cleaning.svg",
+      "bullets": [
+        "Tailor-made fit",
+        "OEM and aftermarket options",
+        "Common fits for Ajax, Cissell, Forenta, Sankosha, and Unipress"
+      ],
+      "applications": [
+        "Press bucks",
+        "Steam air finishers",
+        "Pants toppers",
+        "Shirt units"
+      ]
+    },
+    {
+      "slug": "laundry-pads-covers",
+      "name": "Laundry Pads & Covers",
+      "short": "Laundry press pads and covers designed for commercial finishing operations.",
+      "description": "Durable fabrics and layered construction help maintain performance in demanding commercial laundry environments.",
+      "image": "/images/categories/laundry.svg",
+      "bullets": [
+        "Commercial laundry applications",
+        "Heat and wear resistant materials",
+        "Built for repeatable performance"
+      ],
+      "applications": [
+        "Body presses",
+        "Leggers",
+        "Utility presses",
+        "Finishing boards"
+      ]
+    },
+    {
+      "slug": "steel-pads",
+      "name": "Steel & Texsteel Pads",
+      "short": "Steel and silicone base pads for heavy-duty finishing and specialty applications.",
+      "description": "Engineered for high heat, durability, and clean finishing where standard pads are not enough.",
+      "image": "/images/categories/steel.svg",
+      "bullets": [
+        "Texsteel options",
+        "Silicone base pad options",
+        "Suitable for high-demand finishing setups"
+      ],
+      "applications": [
+        "Base pad replacements",
+        "High heat finishing stations",
+        "Specialty press systems"
+      ]
+    },
+    {
+      "slug": "roll-goods-fabrics",
+      "name": "Roll Goods & Fabrics",
+      "short": "Industrial fabrics, layered materials, and roll goods for fabrication and replacement needs.",
+      "description": "Useful for custom builds, maintenance work, and replacement programs across press and textile operations.",
+      "image": "/images/categories/roll-goods.svg",
+      "bullets": [
+        "Fabric rolls",
+        "Replacement materials",
+        "Support for custom fabrication"
+      ],
+      "applications": [
+        "Shop maintenance",
+        "Fabrication runs",
+        "Custom covers",
+        "Replacement programs"
+      ]
+    },
+    {
+      "slug": "industrial-sewing",
+      "name": "Industrial Sewing",
+      "short": "Contract sewing and textile fabrication for industrial products and components.",
+      "description": "The same sewing and fabrication capability behind the company’s press products can support other industrial textile work.",
+      "image": "/images/categories/sewing.svg",
+      "bullets": [
+        "Custom fabrication available",
+        "Industrial contract sewing support",
+        "Fast quote path for custom work"
+      ],
+      "applications": [
+        "Dust covers",
+        "Jackets",
+        "Fabricated components",
+        "Custom assemblies"
+      ]
+    },
+    {
+      "slug": "knitted-wire-mesh",
+      "name": "Knitted Wire Mesh",
+      "short": "Fabricated knitted wire mesh components including demister pads and oil mist filters.",
+      "description": "A separate capability that broadens the company’s manufacturing base beyond laundry and dry cleaning textiles.",
+      "image": "/images/categories/wire-mesh.svg",
+      "bullets": [
+        "Demister pads",
+        "Oil mist filters",
+        "Fabricated wire mesh components"
+      ],
+      "applications": [
+        "Industrial filtration",
+        "Mist elimination",
+        "Custom mesh assemblies"
+      ]
+    }
+  ],
+  "industries": [
+    {
+      "name": "Commercial Dry Cleaning",
+      "description": "Pads, covers, and accessories for presses, finishers, and toppers used in dry cleaning operations.",
+      "image": "/images/industries/dry-cleaning.svg"
+    },
+    {
+      "name": "Commercial Laundry",
+      "description": "Durable products for high-volume laundry finishing environments.",
+      "image": "/images/industries/laundry.svg"
+    },
+    {
+      "name": "Equipment Manufacturers",
+      "description": "OEM production support for manufacturers that need consistent quality and repeatable fit.",
+      "image": "/images/industries/oem.svg"
+    },
+    {
+      "name": "Industrial Textile Fabrication",
+      "description": "Contract sewing and specialty textile work for industrial applications.",
+      "image": "/images/industries/textile.svg"
+    },
+    {
+      "name": "Wire Mesh Components",
+      "description": "Knitted wire mesh parts including demister pads and oil mist filters.",
+      "image": "/images/industries/mesh.svg"
+    }
+  ],
+  "resourceLinks": [
+    {
+      "title": "Product Catalogs",
+      "description": "Downloadable product catalog section with dry cleaning, laundry, roll goods, and accessories information.",
+      "href": "#"
+    },
+    {
+      "title": "Installation Videos",
+      "description": "Training and product support content for customers and distributors.",
+      "href": "#"
+    },
+    {
+      "title": "How to Find Make & Model",
+      "description": "Ordering guidance based on make and model information from common machine manufacturers.",
+      "href": "#"
+    },
+    {
+      "title": "Request a Quote",
+      "description": "Simple quote intake page for product, OEM, and custom fabrication inquiries.",
+      "href": "/request-quote"
+    }
+  ],
+  "distributorStates": [
+    {
+      "state": "Alabama",
+      "distributors": [
+        {
+          "name": "A-1 Products",
+          "city": "Birmingham",
+          "phone": "(205) 787-1403"
+        },
+        {
+          "name": "Fabriclean Supply of Atlanta",
+          "city": "Birmingham",
+          "phone": "(205) 251-7272"
+        },
+        {
+          "name": "Mobile Solvent & Supply",
+          "city": "Mobile",
+          "phone": "(251) 675-9702"
+        },
+        {
+          "name": "Office Solutions",
+          "city": "Mobile",
+          "phone": "(251) 666-7204"
+        }
+      ]
+    },
+    {
+      "state": "Alaska",
+      "distributors": [
+        {
+          "name": "Automated Laundry Systems & Supply",
+          "city": "Anchorage",
+          "phone": "(907) 472-7863"
+        }
+      ]
+    },
+    {
+      "state": "Arizona",
+      "distributors": [
+        {
+          "name": "Laundry and Cleaners Supply",
+          "city": "Phoenix",
+          "phone": "(602) 244-0770"
+        }
+      ]
+    },
+    {
+      "state": "Arkansas",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of Arkansas",
+          "city": "Little Rock",
+          "phone": "(501) 565-5288"
+        },
+        {
+          "name": "Nu Way Products Co",
+          "city": "West Memphis",
+          "phone": "(870) 735-4291"
+        }
+      ]
+    },
+    {
+      "state": "California",
+      "distributors": [
+        {
+          "name": "E & G Sales",
+          "city": "Los Angeles",
+          "phone": "(213) 622-8820"
+        },
+        {
+          "name": "Pacific Steam Equipment Inc",
+          "city": "Santa Fe Springs",
+          "phone": "(562) 906-9292"
+        },
+        {
+          "name": "United Cleaners Supply",
+          "city": "Compton",
+          "phone": "(310) 537-2096"
+        },
+        {
+          "name": "United Cleaners Supply",
+          "city": "Hayward",
+          "phone": "(510) 324-3330"
+        },
+        {
+          "name": "United Cleaners Supply",
+          "city": "Poway",
+          "phone": "(858) 486-0953"
+        },
+        {
+          "name": "Warren's Fabrics",
+          "city": "Burlingame",
+          "phone": "(650) 697-8463"
+        },
+        {
+          "name": "Winca Supply",
+          "city": "San Leandro",
+          "phone": "(510) 357-3919"
+        }
+      ]
+    },
+    {
+      "state": "Colorado",
+      "distributors": []
+    },
+    {
+      "state": "Connecticut",
+      "distributors": [
+        {
+          "name": "United Suppliers Inc",
+          "city": "Bridgeport",
+          "phone": "(203) 333-3521"
+        }
+      ]
+    },
+    {
+      "state": "Delaware",
+      "distributors": []
+    },
+    {
+      "state": "Florida",
+      "distributors": [
+        {
+          "name": "Enercom",
+          "city": "Doral",
+          "phone": "(809) 534-9240"
+        },
+        {
+          "name": "Fabriclean Supply of Florida",
+          "city": "Jacksonville",
+          "phone": "(904) 696-7685"
+        },
+        {
+          "name": "Fabriclean Supply of Florida",
+          "city": "Tampa",
+          "phone": "(813) 623-3553"
+        },
+        {
+          "name": "Gulf Coast Equipment Sales Corporation",
+          "city": "Lakeland",
+          "phone": "(863) 333-0004"
+        },
+        {
+          "name": "Industrial Equipment & Supplies",
+          "city": "Miami",
+          "phone": "(305) 324-0410"
+        },
+        {
+          "name": "OEM Laundry Parts, LLC",
+          "city": "Jacksonville",
+          "phone": "(904) 240-0211"
+        },
+        {
+          "name": "Steiner-Atlantic Corp",
+          "city": "Miami",
+          "phone": "(305) 754-4551"
+        },
+        {
+          "name": "Tampa Bay Cleaners Supply",
+          "city": "Tampa",
+          "phone": "(813) 247-6332"
+        },
+        {
+          "name": "Unipress Corporation",
+          "city": "Miami",
+          "phone": "(813) 623-3731"
+        },
+        {
+          "name": "Zeller Mayer",
+          "city": "North Palm Beach",
+          "phone": "(800) 431-2244"
+        }
+      ]
+    },
+    {
+      "state": "Georgia",
+      "distributors": [
+        {
+          "name": "A-1 Products",
+          "city": "Marietta",
+          "phone": "(770) 428-5545"
+        },
+        {
+          "name": "DBA Phenix Supply Company",
+          "city": "Decatur",
+          "phone": "(770) 981-2800"
+        },
+        {
+          "name": "Fabriclean Supply of Atlanta",
+          "city": "Decatur",
+          "phone": "(770) 981-2800"
+        },
+        {
+          "name": "Gulf States Laundry",
+          "city": "Alpharetta",
+          "phone": "(770) 343-8455"
+        },
+        {
+          "name": "PMC Sales",
+          "city": "Eatonton",
+          "phone": "(706) 485-9960"
+        },
+        {
+          "name": "Tingue",
+          "city": "Peachtree City",
+          "phone": "(800) 829-3864"
+        }
+      ]
+    },
+    {
+      "state": "Hawaii",
+      "distributors": [
+        {
+          "name": "Associate Chemical & Supply",
+          "city": "Honolulu",
+          "phone": "(808) 841-2423"
+        },
+        {
+          "name": "Colburn Laundry",
+          "city": "Honolulu",
+          "phone": "(808) 841-3818"
+        }
+      ]
+    },
+    {
+      "state": "Idaho",
+      "distributors": []
+    },
+    {
+      "state": "Illinois",
+      "distributors": [
+        {
+          "name": "General Kinematics",
+          "city": "Crystal Lake",
+          "phone": "(815) 455-3222"
+        },
+        {
+          "name": "Haiges Machinery Inc",
+          "city": "Huntley",
+          "phone": "(847) 669-3300"
+        },
+        {
+          "name": "Lipke Kentex Hesse/Dionne Supply",
+          "city": "Des Plaines",
+          "phone": "(773) 376-8866"
+        },
+        {
+          "name": "Sankoska USA Inc",
+          "city": "Elk Grove Village",
+          "phone": "(847) 427-9120"
+        },
+        {
+          "name": "Tri Supply",
+          "city": "Loves Park",
+          "phone": "(815) 637-6374"
+        },
+        {
+          "name": "Washburn Machinery",
+          "city": "Elk Grove Village",
+          "phone": "(847) 364-9274"
+        }
+      ]
+    },
+    {
+      "state": "Indiana",
+      "distributors": []
+    },
+    {
+      "state": "Iowa",
+      "distributors": [
+        {
+          "name": "Monaghan Corporation",
+          "city": "Des Moines",
+          "phone": "(515) 266-2120"
+        }
+      ]
+    },
+    {
+      "state": "Kansas",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of Kansas",
+          "city": "Wichita",
+          "phone": "(316) 529-8555"
+        },
+        {
+          "name": "Midwest Conveyor",
+          "city": "Lenexa",
+          "phone": "(913) 384-9950"
+        }
+      ]
+    },
+    {
+      "state": "Kentucky",
+      "distributors": [
+        {
+          "name": "O'Dell Equipment Inc",
+          "city": "Hays",
+          "phone": "(502) 584-6100"
+        },
+        {
+          "name": "Vogt Supply",
+          "city": "Louisville",
+          "phone": "(502) 267-5700"
+        }
+      ]
+    },
+    {
+      "state": "Louisiana",
+      "distributors": [
+        {
+          "name": "Allyson Supply INC",
+          "city": "Harahan",
+          "phone": "(504) 267-5700"
+        },
+        {
+          "name": "Fabriclean Supply of Houston LP",
+          "city": "Baton Rouge",
+          "phone": "(800) 442-7021"
+        }
+      ]
+    },
+    {
+      "state": "Maine",
+      "distributors": [
+        {
+          "name": "Aldrich Equipment",
+          "city": "Worcester",
+          "phone": "(508) 792-1007"
+        },
+        {
+          "name": "W. B. Mason",
+          "city": "Brockton",
+          "phone": "(800) 242-5892"
+        }
+      ]
+    },
+    {
+      "state": "Maryland",
+      "distributors": [
+        {
+          "name": "Stadham Corporation",
+          "city": "Baltimore",
+          "phone": "(410) 945-5700"
+        }
+      ]
+    },
+    {
+      "state": "Massachusetts",
+      "distributors": []
+    },
+    {
+      "state": "Michigan",
+      "distributors": [
+        {
+          "name": "E J Thomas",
+          "city": "Taylor",
+          "phone": "(734) 946-4132"
+        },
+        {
+          "name": "Eagle Star Equipment",
+          "city": "Troy",
+          "phone": "(800) 482-3400"
+        }
+      ]
+    },
+    {
+      "state": "Minnesota",
+      "distributors": [
+        {
+          "name": "E. Weinberg Supply",
+          "city": "Minneapolis",
+          "phone": "(952) 920-0888"
+        },
+        {
+          "name": "Minnesota Chemical Co",
+          "city": "Arden Hills",
+          "phone": "(651) 646-7521"
+        },
+        {
+          "name": "Pros Parts",
+          "city": "Blaine",
+          "phone": "(763) 231-7379"
+        }
+      ]
+    },
+    {
+      "state": "Mississippi",
+      "distributors": []
+    },
+    {
+      "state": "Missouri",
+      "distributors": [
+        {
+          "name": "IG Weingaertner & Sons",
+          "city": "St. Louis",
+          "phone": "(314) 831-8286"
+        },
+        {
+          "name": "Universal Sewing Supply",
+          "city": "St. Louis",
+          "phone": "(314) 862-0800"
+        }
+      ]
+    },
+    {
+      "state": "Montana",
+      "distributors": [
+        {
+          "name": "Chemical Montana Company",
+          "city": "Helena",
+          "phone": "(406) 442-8900"
+        }
+      ]
+    },
+    {
+      "state": "Nebraska",
+      "distributors": []
+    },
+    {
+      "state": "Nevada",
+      "distributors": [
+        {
+          "name": "United Cleaners Supply",
+          "city": "Henderson",
+          "phone": "(702) 564-1010"
+        }
+      ]
+    },
+    {
+      "state": "New Hampshire",
+      "distributors": [
+        {
+          "name": "Yankee",
+          "city": "Barrington",
+          "phone": "(800) 239-9265"
+        }
+      ]
+    },
+    {
+      "state": "New Jersey",
+      "distributors": [
+        {
+          "name": "Hoffman/New Yorker Inc",
+          "city": "Hackensack",
+          "phone": "(570) 928-8155"
+        },
+        {
+          "name": "Kpex Corp",
+          "city": "Neschanic Station",
+          "phone": "(908) 369-9695"
+        }
+      ]
+    },
+    {
+      "state": "New Mexico",
+      "distributors": []
+    },
+    {
+      "state": "New York",
+      "distributors": [
+        {
+          "name": "D. J. Giancola Exports Inc",
+          "city": "Syracuse",
+          "phone": "(315) 446-1002"
+        },
+        {
+          "name": "Tschopp Supply Co Inc",
+          "city": "Buffalo",
+          "phone": "(716) 897-1600"
+        }
+      ]
+    },
+    {
+      "state": "North Carolina",
+      "distributors": [
+        {
+          "name": "B & G Lieberman Co Inc",
+          "city": "Charlotte",
+          "phone": "(704) 376-0717"
+        },
+        {
+          "name": "Hulon McGraw Inc",
+          "city": "Horse Shoe",
+          "phone": "(828) 891-8871"
+        },
+        {
+          "name": "Leonard Automatics Inc",
+          "city": "Denver",
+          "phone": "(704) 483-9316"
+        },
+        {
+          "name": "Weber Mechanical",
+          "city": "Monroe",
+          "phone": "(704) 282-4124"
+        }
+      ]
+    },
+    {
+      "state": "North Dakota",
+      "distributors": []
+    },
+    {
+      "state": "Ohio",
+      "distributors": [
+        {
+          "name": "Aristo Craft",
+          "city": "New Albany",
+          "phone": "(800) 875-0479"
+        },
+        {
+          "name": "Banasch's Inc",
+          "city": "Milford",
+          "phone": "(513) 731-2040"
+        },
+        {
+          "name": "Cincinnati Laundry Equipment",
+          "city": "Cincinnati",
+          "phone": "(513) 542-5000"
+        },
+        {
+          "name": "E J Thomas",
+          "city": "Akron",
+          "phone": "(800) 878-0880"
+        },
+        {
+          "name": "E J Thomas",
+          "city": "Cincinnati",
+          "phone": "(800) 878-0880"
+        },
+        {
+          "name": "E J Thomas",
+          "city": "Fairfield",
+          "phone": "(800) 878-0880"
+        },
+        {
+          "name": "E J Thomas",
+          "city": "Streetsboro",
+          "phone": "(800) 878-0880"
+        },
+        {
+          "name": "Hudson Equipment Inc",
+          "city": "Hudson",
+          "phone": "(330) 342-9900"
+        },
+        {
+          "name": "International Steel Wool",
+          "city": "Springfield",
+          "phone": "(397) 460-7850"
+        },
+        {
+          "name": "Machinex Corporation",
+          "city": "Cincinnati",
+          "phone": "(513) 771-4020"
+        },
+        {
+          "name": "Moore Services",
+          "city": "Solon",
+          "phone": "(800) 941-6673"
+        },
+        {
+          "name": "N. S. Farrington",
+          "city": "New Albany",
+          "phone": "(800) 722-0374"
+        }
+      ]
+    },
+    {
+      "state": "Oklahoma",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of Oklahoma",
+          "city": "Oklahoma City",
+          "phone": "(405) 232-9289"
+        }
+      ]
+    },
+    {
+      "state": "Oregon",
+      "distributors": []
+    },
+    {
+      "state": "Pennsylvania",
+      "distributors": [
+        {
+          "name": "Apparel Machinery & Supply Co",
+          "city": "Philadelphia",
+          "phone": "(215) 634-2626"
+        },
+        {
+          "name": "E J Thomas",
+          "city": "Pittsburgh",
+          "phone": "(800) 878-0880"
+        },
+        {
+          "name": "FM Supply Inc",
+          "city": "Kennett Square",
+          "phone": "(610) 444-1412"
+        },
+        {
+          "name": "Fleishman Supplies",
+          "city": "Philadelphia",
+          "phone": "(215) 925-4261"
+        },
+        {
+          "name": "Frankford Machinery Inc",
+          "city": "Philadelphia",
+          "phone": "(215) 289-3434"
+        },
+        {
+          "name": "Friedman Supply",
+          "city": "Pittsburgh",
+          "phone": "(412) 421-7724"
+        },
+        {
+          "name": "J Equipment Inc",
+          "city": "Wilkes Barre",
+          "phone": "(570) 824-8483"
+        }
+      ]
+    },
+    {
+      "state": "Rhode Island",
+      "distributors": []
+    },
+    {
+      "state": "South Carolina",
+      "distributors": [
+        {
+          "name": "American Laundry Products Inc",
+          "city": "North Augusta",
+          "phone": "(803) 663-6606"
+        },
+        {
+          "name": "Fabriclean Supply of Carolina",
+          "city": "Columbia",
+          "phone": "(803) 776-7988"
+        },
+        {
+          "name": "Texchine Inc",
+          "city": "Chapin",
+          "phone": "(803) 345-5171"
+        }
+      ]
+    },
+    {
+      "state": "South Dakota",
+      "distributors": [
+        {
+          "name": "Richard Ewing Equipment",
+          "city": "Sioux Falls",
+          "phone": "(605) 368-2528"
+        }
+      ]
+    },
+    {
+      "state": "Tennessee",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of Tennessee",
+          "city": "Knoxville",
+          "phone": "(865) 689-1221"
+        },
+        {
+          "name": "Fabriclean Supply of Tennessee",
+          "city": "Nashville",
+          "phone": "(615) 254-5192"
+        },
+        {
+          "name": "Forenta",
+          "city": "Morristown",
+          "phone": "(423) 586-5370"
+        }
+      ]
+    },
+    {
+      "state": "Texas",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of Dallas",
+          "city": "Dallas",
+          "phone": "(214) 826-4161"
+        },
+        {
+          "name": "Fabriclean Supply of Houston",
+          "city": "Buda",
+          "phone": "(800) 442-7021"
+        },
+        {
+          "name": "Fabriclean Supply of Houston",
+          "city": "Houston",
+          "phone": "(713) 864-6373"
+        },
+        {
+          "name": "Fabriclean Supply of Oklahoma",
+          "city": "Amarillo",
+          "phone": "(806) 374-2851"
+        },
+        {
+          "name": "Intex Distributing",
+          "city": "Hutto",
+          "phone": "(512) 474-6075"
+        },
+        {
+          "name": "Laun-Dry Supply",
+          "city": "El Paso",
+          "phone": "(915) 533-8217"
+        },
+        {
+          "name": "Mustang Enterprises Ltd",
+          "city": "San Antonio",
+          "phone": "(210) 734-3644"
+        },
+        {
+          "name": "Ramco Laundry Machinery Inc",
+          "city": "Arlington",
+          "phone": "(817) 640-5100"
+        },
+        {
+          "name": "Rosenberg Supply Co Inc",
+          "city": "San Antonio",
+          "phone": "(210) 736-1873"
+        },
+        {
+          "name": "USA Distributors",
+          "city": "Dallas",
+          "phone": "(214) 942-9040"
+        },
+        {
+          "name": "Wagner Supply Company Inc",
+          "city": "Odessa",
+          "phone": "(432) 363-0433"
+        }
+      ]
+    },
+    {
+      "state": "Utah",
+      "distributors": [
+        {
+          "name": "A E C Ally Equipment Company Inc",
+          "city": "Murray",
+          "phone": "(801) 255-9646"
+        },
+        {
+          "name": "Mendenhall Commercial Laundry Equipment",
+          "city": "North Salt Lake",
+          "phone": "(801) 298-1133"
+        }
+      ]
+    },
+    {
+      "state": "Vermont",
+      "distributors": []
+    },
+    {
+      "state": "Virginia",
+      "distributors": [
+        {
+          "name": "Fabriclean Supply of the Mid-Atlantic",
+          "city": "Henrico",
+          "phone": "(804) 232-6703"
+        },
+        {
+          "name": "Richclean",
+          "city": "Richmond",
+          "phone": "(804) 262-7433"
+        }
+      ]
+    },
+    {
+      "state": "Washington",
+      "distributors": [
+        {
+          "name": "Colmac Industries",
+          "city": "Colville",
+          "phone": "(800) 926-5622"
+        },
+        {
+          "name": "Dynamic Sales and Services",
+          "city": "Kirkland",
+          "phone": "(425) 823-4300"
+        }
+      ]
+    },
+    {
+      "state": "West Virginia",
+      "distributors": []
+    },
+    {
+      "state": "Wisconsin",
+      "distributors": [
+        {
+          "name": "Alliance Laundry Systems",
+          "city": "Ripon",
+          "phone": "(920) 748-3121"
+        },
+        {
+          "name": "Wausau Chemical Corporation",
+          "city": "Wausau",
+          "phone": "(715) 842-2285"
+        }
+      ]
+    },
+    {
+      "state": "Wyoming",
+      "distributors": []
+    }
+  ]
+}

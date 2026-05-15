@@ -1,88 +1,89 @@
+import { siteData } from "@/components/site-data";
+
 export function QuoteForm() {
+  const { quoteForm } = siteData;
+  const { fields } = quoteForm;
+
   return (
     <form
-      action="https://formspree.io/f/xdabwnlr"
+      action={quoteForm.action}
       method="POST"
       className="grid gap-5 rounded-[2rem] border border-slate-200 bg-white p-8 shadow-card"
     >
       <div className="grid gap-5 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Name
+          {fields.nameLabel}
           <input
             name="name"
             required
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-            placeholder="Your name"
+            placeholder={fields.namePlaceholder}
           />
         </label>
 
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Company
+          {fields.companyLabel}
           <input
             name="company"
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-            placeholder="Company name"
+            placeholder={fields.companyPlaceholder}
           />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Email
+          {fields.emailLabel}
           <input
             name="email"
             type="email"
             required
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-            placeholder="you@company.com"
+            placeholder={fields.emailPlaceholder}
           />
         </label>
 
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Phone
+          {fields.phoneLabel}
           <input
             name="phone"
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-            placeholder="Phone number"
+            placeholder={fields.phonePlaceholder}
           />
         </label>
       </div>
 
       <div className="grid gap-5 md:grid-cols-2">
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Product Category
+          {fields.productCategoryLabel}
           <select
             name="productCategory"
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
           >
-            <option>Dry Cleaning Pads</option>
-            <option>Laundry Pads & Covers</option>
-            <option>Steel & Texsteel Pads</option>
-            <option>Roll Goods & Fabrics</option>
-            <option>Industrial Sewing</option>
-            <option>Knitted Wire Mesh</option>
-            <option>Not sure yet</option>
+            {quoteForm.productCategoryOptions.map((option) => (
+              <option key={option}>{option}</option>
+            ))}
           </select>
         </label>
 
         <label className="grid gap-2 text-sm font-semibold text-slate-700">
-          Machine Make / Model
+          {fields.machineModelLabel}
           <input
             name="machineModel"
             className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-            placeholder="Ajax, Sankosha, Unipress, etc."
+            placeholder={fields.machineModelPlaceholder}
           />
         </label>
       </div>
 
       <label className="grid gap-2 text-sm font-semibold text-slate-700">
-        Project Details
+        {fields.projectDetailsLabel}
         <textarea
           name="projectDetails"
           rows={6}
           required
           className="rounded-xl border border-slate-300 px-4 py-3 outline-none ring-brand-red transition focus:ring-2"
-          placeholder="Tell us what you need, quantities, timing, and any spec details."
+          placeholder={fields.projectDetailsPlaceholder}
         />
       </label>
 
@@ -91,7 +92,7 @@ export function QuoteForm() {
           type="submit"
           className="rounded-xl bg-brand-red px-6 py-3 font-bold text-white transition hover:bg-brand-orange"
         >
-          Submit Request
+          {fields.submitLabel}
         </button>
       </div>
     </form>

@@ -3,9 +3,11 @@ import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { IndustryCard, ProductCard } from "@/components/CardGrid";
-import { industries, productCategories } from "@/components/site-data";
+import { industries, productCategories, siteData } from "@/components/site-data";
 
 export default function HomePage() {
+  const { home } = siteData;
+
   return (
     <main>
       <Hero />
@@ -13,18 +15,13 @@ export default function HomePage() {
       <section className="py-20">
         <Container>
           <SectionHeading
-            eyebrow="About Buckeye Pads & Covers"
-            title="Reliable pads and covers for commercial finishing equipment"
-            description="Buckeye Pads & Covers manufactures replacement pads, covers, head plates, and custom textile products for dry cleaning, laundry, and industrial equipment."
+            eyebrow={home.about.eyebrow}
+            title={home.about.title}
+            description={home.about.description}
           />
 
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
-            {[
-              "OEM and aftermarket products",
-              "3,000+ catalog items",
-              "Custom fabrication available",
-              "Distributor support nationwide",
-            ].map((item) => (
+            {home.about.highlights.map((item) => (
               <div
                 key={item}
                 className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card"
@@ -39,9 +36,9 @@ export default function HomePage() {
       <section className="bg-brand-gray py-20">
         <Container>
           <SectionHeading
-            eyebrow="Products"
-            title="Find the right product for your equipment"
-            description="Browse organized product categories for dry cleaning, laundry, pressing, finishing, and industrial applications."
+            eyebrow={home.products.eyebrow}
+            title={home.products.title}
+            description={home.products.description}
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -55,9 +52,9 @@ export default function HomePage() {
       <section className="py-20">
         <Container>
           <SectionHeading
-            eyebrow="Industries"
-            title="Serving the industries that depend on quality finishing products"
-            description="Buckeye Pads & Covers supports dry cleaners, laundries, equipment manufacturers, distributors, and industrial customers."
+            eyebrow={home.industries.eyebrow}
+            title={home.industries.title}
+            description={home.industries.description}
           />
 
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
@@ -72,43 +69,40 @@ export default function HomePage() {
         <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
             <p className="text-sm font-bold uppercase tracking-[0.24em] text-red-100">
-              Find a distributor
+              {home.distributorCta.eyebrow}
             </p>
 
             <h2 className="mt-4 text-4xl font-black tracking-tight">
-              Get the products you need through a trusted distributor
+              {home.distributorCta.title}
             </h2>
 
             <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-200">
-              Buckeye Pads & Covers works with distributors to help customers
-              find the right pads, covers, and replacement products for their
-              equipment.
+              {home.distributorCta.description}
             </p>
           </div>
 
           <div className="rounded-[2rem] bg-white p-8 text-slate-900 shadow-2xl">
             <h3 className="text-2xl font-black tracking-tight text-brand-navy">
-              Need help finding the right product?
+              {home.distributorCta.cardTitle}
             </h3>
 
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              Request a quote or contact a distributor for help matching
-              products to your equipment, application, and replacement needs.
+              {home.distributorCta.cardDescription}
             </p>
 
             <div className="mt-6 flex flex-wrap gap-4">
               <Link
-                href="/request-quote"
+                href={home.distributorCta.primaryCtaHref}
                 className="rounded-xl bg-brand-red px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-orange"
               >
-                Request a Quote
+                {home.distributorCta.primaryCtaLabel}
               </Link>
 
               <Link
-                href="/distributors"
+                href={home.distributorCta.secondaryCtaHref}
                 className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-slate-900 transition hover:bg-slate-50"
               >
-                Find a Distributor
+                {home.distributorCta.secondaryCtaLabel}
               </Link>
             </div>
           </div>

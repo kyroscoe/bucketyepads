@@ -1,20 +1,22 @@
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
-import { company } from "@/components/site-data";
+import { company, siteData } from "@/components/site-data";
 import { QuoteForm } from "@/components/QuoteForm";
 
 export default function ContactPage() {
+  const { contactPage } = siteData;
+
   return (
     <main>
       <PageHero
-        title="Contact"
-        description="Contact us with any questions or concerns."
+        title={contactPage.heroTitle}
+        description={contactPage.heroDescription}
       />
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.8fr_1.2fr]">
           <div className="rounded-[2rem] border border-slate-200 bg-white p-8 shadow-card">
             <h2 className="text-2xl font-black tracking-tight text-brand-navy">
-              Contact Info
+              {contactPage.cardTitle}
             </h2>
             <div className="mt-6 space-y-4 text-sm leading-7 text-slate-600">
               <p>

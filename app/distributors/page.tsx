@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { Container } from '@/components/Container';
 import { PageHero } from '@/components/PageHero';
-import { company, distributorStates } from '@/components/site-data';
+import { company, distributorStates, siteData } from '@/components/site-data';
 
 const distributorCount = distributorStates.reduce((total, state) => total + state.distributors.length, 0);
 const fallbackStateCount = distributorStates.filter((state) => state.distributors.length === 0).length;
@@ -11,26 +11,28 @@ function phoneHref(phone: string) {
 }
 
 export default function DistributorsPage() {
+  const { distributorsPage } = siteData;
+
   return (
     <main>
       <PageHero
-        title="Find a Distributor"
-        description="Find authorized Buckeye Pads & Covers distributors by state. If your state does not have a listed distributor, contact FH Bonn customer service directly."
+        title={distributorsPage.heroTitle}
+        description={distributorsPage.heroDescription}
       />
       <section className="py-20">
         <Container className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr]">
           <aside className="h-fit rounded-[2rem] border border-slate-200 bg-white p-8 shadow-card lg:sticky lg:top-28">
-            <h2 className="text-2xl font-black tracking-tight text-brand-navy">Distributor Support</h2>
+            <h2 className="text-2xl font-black tracking-tight text-brand-navy">{distributorsPage.supportTitle}</h2>
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              This directory includes {distributorCount} distributor listings across the United States. States without a local listing route directly to FH Bonn customer service.
+              {distributorsPage.supportDescription.replace('{count}', String(distributorCount))}
             </p>
             <dl className="mt-6 grid gap-4 border-y border-slate-200 py-6">
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Fallback States</dt>
+                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.fallbackStatesLabel}</dt>
                 <dd className="mt-1 text-2xl font-black text-brand-navy">{fallbackStateCount}</dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Customer Service</dt>
+                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.customerServiceLabel}</dt>
                 <dd className="mt-1 text-sm font-bold text-brand-navy">
                   <a className="transition hover:text-brand-red" href={`mailto:${company.email}`}>
                     {company.email}
@@ -38,7 +40,7 @@ export default function DistributorsPage() {
                 </dd>
               </div>
               <div>
-                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">Phone</dt>
+                <dt className="text-xs font-bold uppercase tracking-[0.2em] text-slate-500">{distributorsPage.phoneLabel}</dt>
                 <dd className="mt-1 text-sm font-bold text-brand-navy">
                   <a className="transition hover:text-brand-red" href={phoneHref(company.tollFree)}>
                     {company.tollFree}
@@ -47,7 +49,7 @@ export default function DistributorsPage() {
               </div>
             </dl>
             <Link href="/contact" className="mt-6 inline-flex rounded-xl bg-brand-red px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-orange">
-              Contact FH Bonn
+              {distributorsPage.contactButtonLabel}
             </Link>
           </aside>
           <div className="grid gap-5">
@@ -74,9 +76,9 @@ export default function DistributorsPage() {
                   </div>
                 ) : (
                   <div className="mt-5 rounded-2xl bg-slate-50 p-4">
-                    <h3 className="text-base font-black text-brand-navy">FH Bonn Customer Service</h3>
+                    <h3 className="text-base font-black text-brand-navy">{distributorsPage.customerServiceTitle}</h3>
                     <p className="mt-2 text-sm leading-6 text-slate-600">
-                      No local distributor is listed for {state}. Contact customer service for product support and ordering help.
+                      {distributorsPage.noDistributorTemplate.replace('{state}', state)}
                     </p>
                     <div className="mt-3 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold">
                       <a className="text-brand-red transition hover:text-brand-orange" href={`mailto:${company.email}`}>
