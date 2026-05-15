@@ -581,11 +581,6 @@
           "name": "Moore Services",
           "city": "Solon",
           "phone": "(800) 941-6673"
-        },
-        {
-          "name": "N. S. Farrington",
-          "city": "New Albany",
-          "phone": "(800) 722-0374"
         }
       ]
     },
@@ -1043,7 +1038,7 @@
         "label": "Founded by Francis Henry Bonn"
       },
       {
-        "value": "2018",
+        "value": "2016",
         "label": "FH Bonn purchased by Darrin Bonn and Tim Kephart"
       },
       {
