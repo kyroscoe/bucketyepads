@@ -581,11 +581,6 @@
           "name": "Moore Services",
           "city": "Solon",
           "phone": "(800) 941-6673"
-        },
-        {
-          "name": "N. S. Farrington",
-          "city": "New Albany",
-          "phone": "(800) 722-0374"
         }
       ]
     },
@@ -950,7 +945,7 @@
   },
   "metadata": {
     "title": "Buckeye Pads & Covers | Industrial Press Pads & Covers",
-    "description": "Dry cleaner pads and covers"
+    "description": "Redesigned marketing site for a dry cleaning pads and covers manufacturer."
   },
   "resourcesPage": {
     "heroTitle": "Resources",
@@ -991,8 +986,7 @@
     "heroDescription": "Find authorized Buckeye Pads & Covers distributors by state. If your state does not have a listed distributor, contact FH Bonn customer service directly.",
     "phoneLabel": "Phone",
     "supportTitle": "Distributor Support",
-    "supportDescription": "This directory includes {count} distributor listings across the United States. States without a local listing route directly to Buckeye Pads & Covers customer service.",
-    "fallbackStatesLabel": "Fallback States",
+    "supportDescription": "This directory includes {count} distributor listings across the United States. If you cannot find a distributor near you, contact us for product support and ordering help.",
     "customerServiceLabel": "Customer Service",
     "heroTitle": "Find a Distributor"
   },
@@ -1102,7 +1096,7 @@
     },
     "about": {
       "eyebrow": "About Buckeye Pads & Covers",
-      "title": "Reliable pads and covers for commercial Dry Cleaning Equipment",
+      "title": "Reliable pads and covers for commercial finishing equipment",
       "description": "Buckeye Pads & Covers manufactures replacement pads, covers, head plates, and custom textile products for dry cleaning, laundry, and industrial equipment.",
       "highlights": [
         "OEM and aftermarket products",
