@@ -1014,11 +1014,6 @@
       "name": "Industrial Textile Fabrication",
       "description": "Contract sewing and specialty textile work for industrial applications.",
       "image": "/images/industries/textile.svg"
-    },
-    {
-      "name": "Wire Mesh Components",
-      "description": "Knitted wire mesh parts including demister pads and oil mist filters.",
-      "image": "/images/industries/mesh.svg"
     }
   ],
   "aboutPage": {
