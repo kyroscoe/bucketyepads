@@ -46,6 +46,11 @@ export function Hero() {
           </div>
         </div>
         <div className="relative">
+          {hero.imageText ? (
+            <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.2em] text-red-100 lg:text-left">
+              {hero.imageText}
+            </p>
+          ) : null}
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-white/15 to-transparent blur-2xl" />
           <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
             <Image

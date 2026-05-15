@@ -68,6 +68,7 @@ collections:
                   - { label: Primary Button URL, name: primaryCtaHref, widget: string }
                   - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string }
                   - { label: Secondary Button URL, name: secondaryCtaHref, widget: string }
+                  - { label: Text Above Image, name: imageText, widget: string, required: false }
                   - label: Image
                     name: image
                     widget: image
