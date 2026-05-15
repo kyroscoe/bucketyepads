@@ -1,9 +1,9 @@
-import Link from 'next/link';
-import { Container } from '@/components/Container';
-import { Hero } from '@/components/Hero';
-import { SectionHeading } from '@/components/SectionHeading';
-import { IndustryCard, ProductCard } from '@/components/CardGrid';
-import { industries, productCategories } from '@/components/site-data';
+import Link from "next/link";
+import { Container } from "@/components/Container";
+import { Hero } from "@/components/Hero";
+import { SectionHeading } from "@/components/SectionHeading";
+import { IndustryCard, ProductCard } from "@/components/CardGrid";
+import { industries, productCategories } from "@/components/site-data";
 
 export default function HomePage() {
   return (
@@ -14,17 +14,21 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="About Buckeye Pads & Covers"
-            title="A cleaner, more professional website direction for a legacy manufacturer"
-            description="This redesign keeps the existing brand recognizable while replacing the dated layout with stronger hierarchy, cleaner calls to action, and category-based navigation."
+            title="Reliable pads and covers for commercial finishing equipment"
+            description="Buckeye Pads & Covers manufactures replacement pads, covers, head plates, and custom textile products for dry cleaning, laundry, and industrial equipment."
           />
+
           <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
             {[
-              'OEM and aftermarket manufacturing',
-              '3000+ catalog products',
-              'Custom fabrication available',
-              'Distributor-friendly navigation and support',
+              "OEM and aftermarket products",
+              "3,000+ catalog items",
+              "Custom fabrication available",
+              "Distributor support nationwide",
             ].map((item) => (
-              <div key={item} className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card">
+              <div
+                key={item}
+                className="rounded-3xl border border-slate-200 bg-white p-6 shadow-card"
+              >
                 <div className="text-lg font-bold text-brand-navy">{item}</div>
               </div>
             ))}
@@ -36,9 +40,10 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Products"
-            title="Organized product categories instead of a cluttered catalog-first homepage"
-            description="The key improvement is clarity. Buyers land here, understand the product structure immediately, and move directly into the right category."
+            title="Find the right product for your equipment"
+            description="Browse organized product categories for dry cleaning, laundry, pressing, finishing, and industrial applications."
           />
+
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {productCategories.map((item) => (
               <ProductCard key={item.slug} item={item} />
@@ -51,9 +56,10 @@ export default function HomePage() {
         <Container>
           <SectionHeading
             eyebrow="Industries"
-            title="Built for the markets FH Bonn already serves"
-            description="The company supports dry cleaning, laundry, equipment manufacturers, and broader industrial fabrication needs."
+            title="Serving the industries that depend on quality finishing products"
+            description="Buckeye Pads & Covers supports dry cleaners, laundries, equipment manufacturers, distributors, and industrial customers."
           />
+
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {industries.map((item) => (
               <IndustryCard key={item.name} item={item} />
@@ -65,25 +71,44 @@ export default function HomePage() {
       <section className="bg-brand-slate py-20 text-white">
         <Container className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
           <div>
-            <p className="text-sm font-bold uppercase tracking-[0.24em] text-red-100">Find a distributor</p>
-            <h2 className="mt-4 text-4xl font-black tracking-tight">Make the sales path easier to navigate</h2>
+            <p className="text-sm font-bold uppercase tracking-[0.24em] text-red-100">
+              Find a distributor
+            </p>
+
+            <h2 className="mt-4 text-4xl font-black tracking-tight">
+              Get the products you need through a trusted distributor
+            </h2>
+
             <p className="mt-5 max-w-2xl text-lg leading-8 text-zinc-200">
-              The current site hides the path forward. This version gives distributors and end customers a direct place
-              to start, then funnels quote requests and product inquiries cleanly.
+              Buckeye Pads & Covers works with distributors to help customers
+              find the right pads, covers, and replacement products for their
+              equipment.
             </p>
           </div>
+
           <div className="rounded-[2rem] bg-white p-8 text-slate-900 shadow-2xl">
-            <h3 className="text-2xl font-black tracking-tight text-brand-navy">Ready to move this into production?</h3>
+            <h3 className="text-2xl font-black tracking-tight text-brand-navy">
+              Need help finding the right product?
+            </h3>
+
             <p className="mt-4 text-sm leading-7 text-slate-600">
-              Start with the homepage, product pages, quote page, and updated contact flow. That is enough to sell the
-              redesign and give the client something they can actually use.
+              Request a quote or contact a distributor for help matching
+              products to your equipment, application, and replacement needs.
             </p>
+
             <div className="mt-6 flex flex-wrap gap-4">
-              <Link href="/request-quote" className="rounded-xl bg-brand-red px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-orange">
-                Request Quote
+              <Link
+                href="/request-quote"
+                className="rounded-xl bg-brand-red px-5 py-3 text-sm font-bold text-white transition hover:bg-brand-orange"
+              >
+                Request a Quote
               </Link>
-              <Link href="/distributors" className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-slate-900 transition hover:bg-slate-50">
-                Distributor Page
+
+              <Link
+                href="/distributors"
+                className="rounded-xl border border-slate-300 px-5 py-3 text-sm font-bold text-slate-900 transition hover:bg-slate-50"
+              >
+                Find a Distributor
               </Link>
             </div>
           </div>

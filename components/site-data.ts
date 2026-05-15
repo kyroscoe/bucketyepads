@@ -14,10 +14,19 @@ export type Industry = {
   image: string;
 };
 
+export type Distributor = {
+  name: string;
+  city: string;
+  phone: string;
+};
+
+export type DistributorState = {
+  state: string;
+  distributors: Distributor[];
+};
+
 export const navLinks = [
   { href: '/', label: 'Home' },
-  { href: '/products', label: 'Products' },
-  { href: '/industries', label: 'Industries' },
   { href: '/distributors', label: 'Distributors' },
   { href: '/about', label: 'About' },
   { href: '/resources', label: 'Resources' },
@@ -144,12 +153,263 @@ export const resourceLinks = [
   },
 ];
 
-export const distributorRegions = [
-  'Midwest',
-  'Northeast',
-  'Southeast',
-  'South Central',
-  'West',
-  'Canada',
-  'International',
+export const distributorStates: DistributorState[] = [
+  {
+    state: 'Alabama',
+    distributors: [
+      { name: 'A-1 Products', city: 'Birmingham', phone: '(205) 787-1403' },
+      { name: 'Fabriclean Supply of Atlanta', city: 'Birmingham', phone: '(205) 251-7272' },
+      { name: 'Mobile Solvent & Supply', city: 'Mobile', phone: '(251) 675-9702' },
+      { name: 'Office Solutions', city: 'Mobile', phone: '(251) 666-7204' },
+    ],
+  },
+  { state: 'Alaska', distributors: [{ name: 'Automated Laundry Systems & Supply', city: 'Anchorage', phone: '(907) 472-7863' }] },
+  { state: 'Arizona', distributors: [{ name: 'Laundry and Cleaners Supply', city: 'Phoenix', phone: '(602) 244-0770' }] },
+  {
+    state: 'Arkansas',
+    distributors: [
+      { name: 'Fabriclean Supply of Arkansas', city: 'Little Rock', phone: '(501) 565-5288' },
+      { name: 'Nu Way Products Co', city: 'West Memphis', phone: '(870) 735-4291' },
+    ],
+  },
+  {
+    state: 'California',
+    distributors: [
+      { name: 'E & G Sales', city: 'Los Angeles', phone: '(213) 622-8820' },
+      { name: 'Pacific Steam Equipment Inc', city: 'Santa Fe Springs', phone: '(562) 906-9292' },
+      { name: 'United Cleaners Supply', city: 'Compton', phone: '(310) 537-2096' },
+      { name: 'United Cleaners Supply', city: 'Hayward', phone: '(510) 324-3330' },
+      { name: 'United Cleaners Supply', city: 'Poway', phone: '(858) 486-0953' },
+      { name: "Warren's Fabrics", city: 'Burlingame', phone: '(650) 697-8463' },
+      { name: 'Winca Supply', city: 'San Leandro', phone: '(510) 357-3919' },
+    ],
+  },
+  { state: 'Colorado', distributors: [] },
+  { state: 'Connecticut', distributors: [{ name: 'United Suppliers Inc', city: 'Bridgeport', phone: '(203) 333-3521' }] },
+  { state: 'Delaware', distributors: [] },
+  {
+    state: 'Florida',
+    distributors: [
+      { name: 'Enercom', city: 'Doral', phone: '(809) 534-9240' },
+      { name: 'Fabriclean Supply of Florida', city: 'Jacksonville', phone: '(904) 696-7685' },
+      { name: 'Fabriclean Supply of Florida', city: 'Tampa', phone: '(813) 623-3553' },
+      { name: 'Gulf Coast Equipment Sales Corporation', city: 'Lakeland', phone: '(863) 333-0004' },
+      { name: 'Industrial Equipment & Supplies', city: 'Miami', phone: '(305) 324-0410' },
+      { name: 'OEM Laundry Parts, LLC', city: 'Jacksonville', phone: '(904) 240-0211' },
+      { name: 'Steiner-Atlantic Corp', city: 'Miami', phone: '(305) 754-4551' },
+      { name: 'Tampa Bay Cleaners Supply', city: 'Tampa', phone: '(813) 247-6332' },
+      { name: 'Unipress Corporation', city: 'Miami', phone: '(813) 623-3731' },
+      { name: 'Zeller Mayer', city: 'North Palm Beach', phone: '(800) 431-2244' },
+    ],
+  },
+  {
+    state: 'Georgia',
+    distributors: [
+      { name: 'A-1 Products', city: 'Marietta', phone: '(770) 428-5545' },
+      { name: 'DBA Phenix Supply Company', city: 'Decatur', phone: '(770) 981-2800' },
+      { name: 'Fabriclean Supply of Atlanta', city: 'Decatur', phone: '(770) 981-2800' },
+      { name: 'Gulf States Laundry', city: 'Alpharetta', phone: '(770) 343-8455' },
+      { name: 'PMC Sales', city: 'Eatonton', phone: '(706) 485-9960' },
+      { name: 'Tingue', city: 'Peachtree City', phone: '(800) 829-3864' },
+    ],
+  },
+  {
+    state: 'Hawaii',
+    distributors: [
+      { name: 'Associate Chemical & Supply', city: 'Honolulu', phone: '(808) 841-2423' },
+      { name: 'Colburn Laundry', city: 'Honolulu', phone: '(808) 841-3818' },
+    ],
+  },
+  { state: 'Idaho', distributors: [] },
+  {
+    state: 'Illinois',
+    distributors: [
+      { name: 'General Kinematics', city: 'Crystal Lake', phone: '(815) 455-3222' },
+      { name: 'Haiges Machinery Inc', city: 'Huntley', phone: '(847) 669-3300' },
+      { name: 'Lipke Kentex Hesse/Dionne Supply', city: 'Des Plaines', phone: '(773) 376-8866' },
+      { name: 'Sankoska USA Inc', city: 'Elk Grove Village', phone: '(847) 427-9120' },
+      { name: 'Tri Supply', city: 'Loves Park', phone: '(815) 637-6374' },
+      { name: 'Washburn Machinery', city: 'Elk Grove Village', phone: '(847) 364-9274' },
+    ],
+  },
+  { state: 'Indiana', distributors: [] },
+  { state: 'Iowa', distributors: [{ name: 'Monaghan Corporation', city: 'Des Moines', phone: '(515) 266-2120' }] },
+  {
+    state: 'Kansas',
+    distributors: [
+      { name: 'Fabriclean Supply of Kansas', city: 'Wichita', phone: '(316) 529-8555' },
+      { name: 'Midwest Conveyor', city: 'Lenexa', phone: '(913) 384-9950' },
+    ],
+  },
+  {
+    state: 'Kentucky',
+    distributors: [
+      { name: "O'Dell Equipment Inc", city: 'Hays', phone: '(502) 584-6100' },
+      { name: 'Vogt Supply', city: 'Louisville', phone: '(502) 267-5700' },
+    ],
+  },
+  {
+    state: 'Louisiana',
+    distributors: [
+      { name: 'Allyson Supply INC', city: 'Harahan', phone: '(504) 267-5700' },
+      { name: 'Fabriclean Supply of Houston LP', city: 'Baton Rouge', phone: '(800) 442-7021' },
+    ],
+  },
+  {
+    state: 'Maine',
+    distributors: [
+      { name: 'Aldrich Equipment', city: 'Worcester', phone: '(508) 792-1007' },
+      { name: 'W. B. Mason', city: 'Brockton', phone: '(800) 242-5892' },
+    ],
+  },
+  { state: 'Maryland', distributors: [{ name: 'Stadham Corporation', city: 'Baltimore', phone: '(410) 945-5700' }] },
+  { state: 'Massachusetts', distributors: [] },
+  {
+    state: 'Michigan',
+    distributors: [
+      { name: 'E J Thomas', city: 'Taylor', phone: '(734) 946-4132' },
+      { name: 'Eagle Star Equipment', city: 'Troy', phone: '(800) 482-3400' },
+    ],
+  },
+  {
+    state: 'Minnesota',
+    distributors: [
+      { name: 'E. Weinberg Supply', city: 'Minneapolis', phone: '(952) 920-0888' },
+      { name: 'Minnesota Chemical Co', city: 'Arden Hills', phone: '(651) 646-7521' },
+      { name: 'Pros Parts', city: 'Blaine', phone: '(763) 231-7379' },
+    ],
+  },
+  { state: 'Mississippi', distributors: [] },
+  {
+    state: 'Missouri',
+    distributors: [
+      { name: 'IG Weingaertner & Sons', city: 'St. Louis', phone: '(314) 831-8286' },
+      { name: 'Universal Sewing Supply', city: 'St. Louis', phone: '(314) 862-0800' },
+    ],
+  },
+  { state: 'Montana', distributors: [{ name: 'Chemical Montana Company', city: 'Helena', phone: '(406) 442-8900' }] },
+  { state: 'Nebraska', distributors: [] },
+  { state: 'Nevada', distributors: [{ name: 'United Cleaners Supply', city: 'Henderson', phone: '(702) 564-1010' }] },
+  { state: 'New Hampshire', distributors: [{ name: 'Yankee', city: 'Barrington', phone: '(800) 239-9265' }] },
+  {
+    state: 'New Jersey',
+    distributors: [
+      { name: 'Hoffman/New Yorker Inc', city: 'Hackensack', phone: '(570) 928-8155' },
+      { name: 'Kpex Corp', city: 'Neschanic Station', phone: '(908) 369-9695' },
+    ],
+  },
+  { state: 'New Mexico', distributors: [] },
+  {
+    state: 'New York',
+    distributors: [
+      { name: 'D. J. Giancola Exports Inc', city: 'Syracuse', phone: '(315) 446-1002' },
+      { name: 'Tschopp Supply Co Inc', city: 'Buffalo', phone: '(716) 897-1600' },
+    ],
+  },
+  {
+    state: 'North Carolina',
+    distributors: [
+      { name: 'B & G Lieberman Co Inc', city: 'Charlotte', phone: '(704) 376-0717' },
+      { name: 'Hulon McGraw Inc', city: 'Horse Shoe', phone: '(828) 891-8871' },
+      { name: 'Leonard Automatics Inc', city: 'Denver', phone: '(704) 483-9316' },
+      { name: 'Weber Mechanical', city: 'Monroe', phone: '(704) 282-4124' },
+    ],
+  },
+  { state: 'North Dakota', distributors: [] },
+  {
+    state: 'Ohio',
+    distributors: [
+      { name: 'Aristo Craft', city: 'New Albany', phone: '(800) 875-0479' },
+      { name: "Banasch's Inc", city: 'Milford', phone: '(513) 731-2040' },
+      { name: 'Cincinnati Laundry Equipment', city: 'Cincinnati', phone: '(513) 542-5000' },
+      { name: 'E J Thomas', city: 'Akron', phone: '(800) 878-0880' },
+      { name: 'E J Thomas', city: 'Cincinnati', phone: '(800) 878-0880' },
+      { name: 'E J Thomas', city: 'Fairfield', phone: '(800) 878-0880' },
+      { name: 'E J Thomas', city: 'Streetsboro', phone: '(800) 878-0880' },
+      { name: 'Hudson Equipment Inc', city: 'Hudson', phone: '(330) 342-9900' },
+      { name: 'International Steel Wool', city: 'Springfield', phone: '(397) 460-7850' },
+      { name: 'Machinex Corporation', city: 'Cincinnati', phone: '(513) 771-4020' },
+      { name: 'Moore Services', city: 'Solon', phone: '(800) 941-6673' },
+      { name: 'N. S. Farrington', city: 'New Albany', phone: '(800) 722-0374' },
+    ],
+  },
+  { state: 'Oklahoma', distributors: [{ name: 'Fabriclean Supply of Oklahoma', city: 'Oklahoma City', phone: '(405) 232-9289' }] },
+  { state: 'Oregon', distributors: [] },
+  {
+    state: 'Pennsylvania',
+    distributors: [
+      { name: 'Apparel Machinery & Supply Co', city: 'Philadelphia', phone: '(215) 634-2626' },
+      { name: 'E J Thomas', city: 'Pittsburgh', phone: '(800) 878-0880' },
+      { name: 'FM Supply Inc', city: 'Kennett Square', phone: '(610) 444-1412' },
+      { name: 'Fleishman Supplies', city: 'Philadelphia', phone: '(215) 925-4261' },
+      { name: 'Frankford Machinery Inc', city: 'Philadelphia', phone: '(215) 289-3434' },
+      { name: 'Friedman Supply', city: 'Pittsburgh', phone: '(412) 421-7724' },
+      { name: 'J Equipment Inc', city: 'Wilkes Barre', phone: '(570) 824-8483' },
+    ],
+  },
+  { state: 'Rhode Island', distributors: [] },
+  {
+    state: 'South Carolina',
+    distributors: [
+      { name: 'American Laundry Products Inc', city: 'North Augusta', phone: '(803) 663-6606' },
+      { name: 'Fabriclean Supply of Carolina', city: 'Columbia', phone: '(803) 776-7988' },
+      { name: 'Texchine Inc', city: 'Chapin', phone: '(803) 345-5171' },
+    ],
+  },
+  { state: 'South Dakota', distributors: [{ name: 'Richard Ewing Equipment', city: 'Sioux Falls', phone: '(605) 368-2528' }] },
+  {
+    state: 'Tennessee',
+    distributors: [
+      { name: 'Fabriclean Supply of Tennessee', city: 'Knoxville', phone: '(865) 689-1221' },
+      { name: 'Fabriclean Supply of Tennessee', city: 'Nashville', phone: '(615) 254-5192' },
+      { name: 'Forenta', city: 'Morristown', phone: '(423) 586-5370' },
+    ],
+  },
+  {
+    state: 'Texas',
+    distributors: [
+      { name: 'Fabriclean Supply of Dallas', city: 'Dallas', phone: '(214) 826-4161' },
+      { name: 'Fabriclean Supply of Houston', city: 'Buda', phone: '(800) 442-7021' },
+      { name: 'Fabriclean Supply of Houston', city: 'Houston', phone: '(713) 864-6373' },
+      { name: 'Fabriclean Supply of Oklahoma', city: 'Amarillo', phone: '(806) 374-2851' },
+      { name: 'Intex Distributing', city: 'Hutto', phone: '(512) 474-6075' },
+      { name: 'Laun-Dry Supply', city: 'El Paso', phone: '(915) 533-8217' },
+      { name: 'Mustang Enterprises Ltd', city: 'San Antonio', phone: '(210) 734-3644' },
+      { name: 'Ramco Laundry Machinery Inc', city: 'Arlington', phone: '(817) 640-5100' },
+      { name: 'Rosenberg Supply Co Inc', city: 'San Antonio', phone: '(210) 736-1873' },
+      { name: 'USA Distributors', city: 'Dallas', phone: '(214) 942-9040' },
+      { name: 'Wagner Supply Company Inc', city: 'Odessa', phone: '(432) 363-0433' },
+    ],
+  },
+  {
+    state: 'Utah',
+    distributors: [
+      { name: 'A E C Ally Equipment Company Inc', city: 'Murray', phone: '(801) 255-9646' },
+      { name: 'Mendenhall Commercial Laundry Equipment', city: 'North Salt Lake', phone: '(801) 298-1133' },
+    ],
+  },
+  { state: 'Vermont', distributors: [] },
+  {
+    state: 'Virginia',
+    distributors: [
+      { name: 'Fabriclean Supply of the Mid-Atlantic', city: 'Henrico', phone: '(804) 232-6703' },
+      { name: 'Richclean', city: 'Richmond', phone: '(804) 262-7433' },
+    ],
+  },
+  {
+    state: 'Washington',
+    distributors: [
+      { name: 'Colmac Industries', city: 'Colville', phone: '(800) 926-5622' },
+      { name: 'Dynamic Sales and Services', city: 'Kirkland', phone: '(425) 823-4300' },
+    ],
+  },
+  { state: 'West Virginia', distributors: [] },
+  {
+    state: 'Wisconsin',
+    distributors: [
+      { name: 'Alliance Laundry Systems', city: 'Ripon', phone: '(920) 748-3121' },
+      { name: 'Wausau Chemical Corporation', city: 'Wausau', phone: '(715) 842-2285' },
+    ],
+  },
+  { state: 'Wyoming', distributors: [] },
 ];
