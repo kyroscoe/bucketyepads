@@ -834,7 +834,7 @@
     {
       "title": "Installation Videos",
       "description": "Training and product support content for customers and distributors.",
-      "href": "#"
+      "href": "/resources/installation-videos"
     },
     {
       "title": "How to Find Make & Model",
@@ -950,6 +950,87 @@
   "resourcesPage": {
     "heroTitle": "Resources",
     "heroDescription": "A resources page keeps catalogs, videos, and ordering help organized instead of scattering them across the site."
+  },
+  "installationVideosPage": {
+    "heroTitle": "Installation Videos",
+    "heroDescription": "Training and installation videos for dry cleaning, laundry, and finishing equipment products.",
+    "videos": [
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 1",
+        "youtubeId": "0wj0YpDRr6c",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 2",
+        "youtubeId": "-K8l-l-Wbwk",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 3",
+        "youtubeId": "_5NciPnhyAo",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #1",
+        "youtubeId": "WcSvEqDmJjM",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #2",
+        "youtubeId": "vEbbq0j2Fis",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #3",
+        "youtubeId": "7P1wDjNWOeg",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #4",
+        "youtubeId": "pbeP7DUz8-k",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #5",
+        "youtubeId": "1FmKdxrLfxQ",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #6",
+        "youtubeId": "7iFKW8cFJl8",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 1",
+        "youtubeId": "fyTZkbGtwV0",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 2",
+        "youtubeId": "KGMcSNkXPS8",
+        "description": ""
+      },
+      {
+        "title": "Unipress LS Install Step 3",
+        "youtubeId": "i6Eh6f7ixtI",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 4",
+        "youtubeId": "Y42Vzx0uijk",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Dry Cleaning Pants Topper Installation",
+        "youtubeId": "s1k0rASqoAY",
+        "description": ""
+      },
+      {
+        "title": "FH BONN RED PRO-FINISH Pad Installation",
+        "youtubeId": "umiOeSmexzg",
+        "description": ""
+      }
+    ]
   },
   "navLinks": [
     {

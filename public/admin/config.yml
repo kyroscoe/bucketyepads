@@ -145,6 +145,21 @@ collections:
               - { label: Hero Title, name: heroTitle, widget: string }
               - { label: Hero Description, name: heroDescription, widget: text }
 
+          - label: Installation Videos Page
+            name: installationVideosPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - label: Videos
+                name: videos
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: YouTube Video ID, name: youtubeId, widget: string }
+                  - { label: Description, name: description, widget: text, required: false }
+
           - label: Contact Page
             name: contactPage
             widget: object
