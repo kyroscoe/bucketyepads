@@ -2,6 +2,7 @@ import Link from "next/link";
 import { CatalogSearch } from "@/components/CatalogSearch";
 import { Container } from "@/components/Container";
 import { PageHero } from "@/components/PageHero";
+import catalogSearchIndex from "@/content/catalog-search-index.json";
 import { siteData } from "@/components/site-data";
 
 export default function CatalogsPage() {
@@ -27,6 +28,7 @@ export default function CatalogsPage() {
 
           <CatalogSearch
             catalogs={catalogsPage.catalogs}
+            searchIndex={catalogSearchIndex}
             placeholder={catalogsPage.searchPlaceholder}
             noResultsText={catalogsPage.noResultsText}
           />

@@ -4,6 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
+    "catalog:index": "node scripts/build-catalog-search-index.mjs",
+    "prebuild": "npm run catalog:index",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"
@@ -11,6 +13,7 @@
   "dependencies": {
     "lucide-react": "^0.511.0",
     "next": "^15.5.12",
+    "pdf-parse": "^2.4.5",
     "react": "19.0.0",
     "react-dom": "19.0.0"
   },

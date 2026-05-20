@@ -160,7 +160,11 @@ collections:
                 fields:
                   - { label: Title, name: title, widget: string }
                   - { label: Description, name: description, widget: text }
-                  - { label: PDF File, name: file, widget: file }
+                  - label: PDF File
+                    name: file
+                    widget: file
+                    media_folder: public/catalogs
+                    public_folder: /catalogs
                   - { label: Search Keywords, name: keywords, widget: text, required: false }
 
           - label: Installation Videos Page

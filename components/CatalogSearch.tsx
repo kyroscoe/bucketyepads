@@ -10,19 +10,30 @@ type Catalog = {
   keywords: string;
 };
 
+type CatalogSearchIndexItem = {
+  file: string;
+  text: string;
+};
+
 type CatalogSearchProps = {
   catalogs: Catalog[];
+  searchIndex: CatalogSearchIndexItem[];
   placeholder: string;
   noResultsText: string;
 };
 
 export function CatalogSearch({
   catalogs,
+  searchIndex,
   placeholder,
   noResultsText,
 }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
+  const searchTextByFile = useMemo(
+    () => new Map(searchIndex.map((item) => [item.file, item.text])),
+    [searchIndex],
+  );
 
   const filteredCatalogs = useMemo(() => {
     if (!normalizedQuery) {
@@ -35,6 +46,7 @@ export function CatalogSearch({
         catalog.description,
         catalog.keywords,
         catalog.file,
+        searchTextByFile.get(catalog.file) ?? "",
       ]
         .join(" ")
         .toLowerCase();
@@ -43,7 +55,7 @@ export function CatalogSearch({
         .split(/\s+/)
         .every((term) => searchableText.includes(term));
     });
-  }, [catalogs, normalizedQuery]);
+  }, [catalogs, normalizedQuery, searchTextByFile]);
 
   return (
     <div>
