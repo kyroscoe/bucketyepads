@@ -145,6 +145,24 @@ collections:
               - { label: Hero Title, name: heroTitle, widget: string }
               - { label: Hero Description, name: heroDescription, widget: text }
 
+          - label: Product Catalogs Page
+            name: catalogsPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - { label: Search Placeholder, name: searchPlaceholder, widget: string }
+              - { label: No Results Text, name: noResultsText, widget: text }
+              - label: Catalog PDFs
+                name: catalogs
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+                  - { label: PDF File, name: file, widget: file }
+                  - { label: Search Keywords, name: keywords, widget: text, required: false }
+
           - label: Installation Videos Page
             name: installationVideosPage
             widget: object

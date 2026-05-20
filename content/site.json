@@ -829,7 +829,7 @@
     {
       "title": "Product Catalogs",
       "description": "Downloadable product catalog section with dry cleaning, laundry, roll goods, and accessories information.",
-      "href": "#"
+      "href": "/resources/catalogs"
     },
     {
       "title": "Installation Videos",
@@ -950,6 +950,32 @@
   "resourcesPage": {
     "heroTitle": "Resources",
     "heroDescription": "A resources page keeps catalogs, videos, and ordering help organized instead of scattering them across the site."
+  },
+  "catalogsPage": {
+    "heroTitle": "Product Catalogs",
+    "heroDescription": "Search catalog PDFs by model number, equipment type, product category, or keyword.",
+    "searchPlaceholder": "Search model number, product, machine, or keyword",
+    "noResultsText": "No catalogs matched your search. Try a different model number, machine name, or product keyword.",
+    "catalogs": [
+      {
+        "title": "Buckeye Dry Cleaning Pads & Covers 2026",
+        "description": "Dry cleaning pads and covers catalog for replacement pads, covers, and finishing equipment products.",
+        "file": "/catalogs/Buckeye-DRY-CLEANING-PADS-COVERS-2026.pdf",
+        "keywords": "dry cleaning pads covers press bucks steam air finishers pants toppers shirt units Ajax Cissell Forenta Sankosha Unipress legger utility press replacement pads model number"
+      },
+      {
+        "title": "Buckeye Misc Accessories for Dry Cleaning Industry 2026",
+        "description": "Accessories catalog for dry cleaning industry replacement parts and support products.",
+        "file": "/catalogs/Buckeye-MISC-ACCESSORIES-FOR-DRY-CLEANING-INDUSTRY-CATALOG-2026.pdf",
+        "keywords": "misc accessories dry cleaning industry replacement accessories parts supplies press pads covers head plates model number"
+      },
+      {
+        "title": "Buckeye Roll Goods Catalog",
+        "description": "Roll goods catalog for industrial fabrics, materials, and replacement cover fabrication needs.",
+        "file": "/catalogs/Buckeye-ROLL-GOODS-CATALOG.pdf",
+        "keywords": "roll goods fabrics materials industrial fabric covers textile replacement fabrication padding model number"
+      }
+    ]
   },
   "installationVideosPage": {
     "heroTitle": "Installation Videos",
