@@ -167,6 +167,32 @@ collections:
                     public_folder: /catalogs
                   - { label: Search Keywords, name: keywords, widget: text, required: false }
 
+          - label: How to Find Make and Model Page
+            name: makeModelPage
+            widget: object
+            fields:
+              - { label: Hero Title, name: heroTitle, widget: string }
+              - { label: Hero Description, name: heroDescription, widget: text }
+              - { label: Intro Title, name: introTitle, widget: string }
+              - { label: Intro Paragraphs, name: introParagraphs, widget: list, field: { label: Paragraph, name: paragraph, widget: text } }
+              - { label: Table Title, name: tableTitle, widget: string }
+              - label: Manufacturers
+                name: manufacturers
+                widget: list
+                summary: "{{fields.manufacturer}}"
+                fields:
+                  - { label: Manufacturer, name: manufacturer, widget: string }
+                  - { label: Where to Find Make and Model Number, name: location, widget: text }
+              - { label: Tips Title, name: tipsTitle, widget: string }
+              - { label: Tips Intro, name: tipsIntro, widget: text }
+              - label: Tips
+                name: tips
+                widget: list
+                summary: "{{fields.title}}"
+                fields:
+                  - { label: Title, name: title, widget: string }
+                  - { label: Description, name: description, widget: text }
+
           - label: Installation Videos Page
             name: installationVideosPage
             widget: object

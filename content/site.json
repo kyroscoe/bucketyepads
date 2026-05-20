@@ -839,7 +839,7 @@
     {
       "title": "How to Find Make & Model",
       "description": "Ordering guidance based on make and model information from common machine manufacturers.",
-      "href": "#"
+      "href": "/resources/how-to-find-make-model"
     },
     {
       "title": "Request a Quote",
@@ -974,6 +974,66 @@
         "description": "Roll goods catalog for industrial fabrics, materials, and replacement cover fabrication needs.",
         "file": "/catalogs/Buckeye-ROLL-GOODS-CATALOG.pdf",
         "keywords": "roll goods fabrics materials industrial fabric covers textile replacement fabrication padding model number"
+      }
+    ]
+  },
+  "makeModelPage": {
+    "heroTitle": "How to Find Make and Model Numbers",
+    "heroDescription": "Use these tips to locate the make and model number before ordering pads, covers, and other press textiles.",
+    "introTitle": "How to find the MAKE and MODEL number",
+    "introParagraphs": [
+      "Make and model number... make and model number. How many times have you heard this when ordering press pads and covers?",
+      "It's true, to order the correct pad and cover for your customer, we must have the make and model number. Here are some tips to help you find this crucial information and make ordering the correct textiles for the pressing machine mistake free."
+    ],
+    "tableTitle": "Manufacturer lookup guide",
+    "manufacturers": [
+      {
+        "manufacturer": "AJAX",
+        "location": "The make and model number are located on the right hand side of the frame behind and below the pressing table."
+      },
+      {
+        "manufacturer": "ALLIANCE/AJAX",
+        "location": "The make and model number are located on the inside left press head support bar."
+      },
+      {
+        "manufacturer": "CISSELL",
+        "location": "Dry cleaning presses: the make and model are found on the right side of the frame underneath the pressing table. Steam Air Finishers: the information is found on the bottom back of the press base. Pants Toppers: the make and model are found on the top left side of the press frame."
+      },
+      {
+        "manufacturer": "FORENTA",
+        "location": "The model number on all Forenta pressing machines is found in the serial number. This information is located on the right side of the press, just below the press table. Be sure to write down the entire serial number."
+      },
+      {
+        "manufacturer": "HOFFMAN",
+        "location": "The make and model are located on the right side of the press just behind the pressing table."
+      },
+      {
+        "manufacturer": "SANKOSHA",
+        "location": "These are perhaps the easiest. Most of the information needed is on the front of the press frame in large bold numbers and letters, in plain view. What a concept!"
+      },
+      {
+        "manufacturer": "UNIPRESS",
+        "location": "On the shirt body units, the make and model is located in plain view, on the front top corner of the frame. It's on a gray panel, and even lists the Unipress part numbers for the appropriate pads, covers and air bags. On all other presses, the make and model is located on the right side of the press just under the pressing table, on the box where the controls are located."
+      }
+    ],
+    "tipsTitle": "Tips for reading model numbers",
+    "tipsIntro": "Now that you know where to look for the needed information, here are some tips to make reading the model number much easier.",
+    "tips": [
+      {
+        "title": "Carry a small flashlight",
+        "description": "This will help shed some light on the needed information."
+      },
+      {
+        "title": "Bring a white crayon",
+        "description": "You can rub the crayon over the letters and numbers, making them much easier to read."
+      },
+      {
+        "title": "Have a tape measure with you",
+        "description": "If the make and model numbers are not available, you can measure the buck of the press and match up the correct pad and cover."
+      },
+      {
+        "title": "Keep craft paper available",
+        "description": "This will allow you to make a tracing, or template, of the press buck if the model number is missing or the press has been rebuilt."
       }
     ]
   },
