@@ -929,6 +929,12 @@
         "description": "Roll goods catalog for industrial fabrics, materials, and replacement cover fabrication needs.",
         "file": "/catalogs/Buckeye-ROLL-GOODS-CATALOG.pdf",
         "keywords": "roll goods fabrics materials industrial fabric covers textile replacement fabrication padding model number"
+      },
+      {
+        "title": "Buckeye Laundry Catalog 2026",
+        "file": "/catalogs/laundry-catalog-2026.pdf",
+        "keywords": "laundry unipress cyclone hurricane collar cuff bon spun",
+        "description": "Accessories catalog for dry cleaning industry replacement parts and support products."
       }
     ]
   },
