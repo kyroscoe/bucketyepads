@@ -27,6 +27,87 @@
       "Not sure yet"
     ]
   },
+  "installationVideosPage": {
+    "heroTitle": "Installation Videos",
+    "heroDescription": "Training and installation videos for dry cleaning, laundry, and finishing equipment products.",
+    "videos": [
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 1",
+        "youtubeId": "0wj0YpDRr6c",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 2",
+        "youtubeId": "-K8l-l-Wbwk",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha LP 190 Installation Step 3",
+        "youtubeId": "_5NciPnhyAo",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #1",
+        "youtubeId": "WcSvEqDmJjM",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #2",
+        "youtubeId": "vEbbq0j2Fis",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #3",
+        "youtubeId": "7P1wDjNWOeg",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #4",
+        "youtubeId": "pbeP7DUz8-k",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #5",
+        "youtubeId": "1FmKdxrLfxQ",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #6",
+        "youtubeId": "7iFKW8cFJl8",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 1",
+        "youtubeId": "fyTZkbGtwV0",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 2",
+        "youtubeId": "KGMcSNkXPS8",
+        "description": ""
+      },
+      {
+        "title": "Unipress LS Install Step 3",
+        "youtubeId": "i6Eh6f7ixtI",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Unipress LS Install Step 4",
+        "youtubeId": "Y42Vzx0uijk",
+        "description": ""
+      },
+      {
+        "title": "FH Bonn Dry Cleaning Pants Topper Installation",
+        "youtubeId": "s1k0rASqoAY",
+        "description": ""
+      },
+      {
+        "title": "FH BONN RED PRO-FINISH Pad Installation",
+        "youtubeId": "umiOeSmexzg",
+        "description": ""
+      }
+    ]
+  },
   "distributorStates": [
     {
       "state": "Alabama",
@@ -825,6 +906,92 @@
       "distributors": []
     }
   ],
+  "catalogsPage": {
+    "heroTitle": "Product Catalogs",
+    "heroDescription": "Search catalog PDFs by model number, equipment type, product category, or keyword.",
+    "searchPlaceholder": "Search model number, product, machine, or keyword",
+    "noResultsText": "No catalogs matched your search. Try a different model number, machine name, or product keyword.",
+    "catalogs": [
+      {
+        "title": "Buckeye Dry Cleaning Pads & Covers 2026",
+        "description": "Dry cleaning pads and covers catalog for replacement pads, covers, and finishing equipment products.",
+        "file": "/catalogs/Buckeye-DRY-CLEANING-PADS-COVERS-2026.pdf",
+        "keywords": "dry cleaning pads covers press bucks steam air finishers pants toppers shirt units Ajax Cissell Forenta Sankosha Unipress legger utility press replacement pads model number"
+      },
+      {
+        "title": "Buckeye Misc Accessories for Dry Cleaning Industry 2026",
+        "description": "Accessories catalog for dry cleaning industry replacement parts and support products.",
+        "file": "/catalogs/Buckeye-MISC-ACCESSORIES-FOR-DRY-CLEANING-INDUSTRY-CATALOG-2026.pdf",
+        "keywords": "misc accessories dry cleaning industry replacement accessories parts supplies press pads covers head plates model number"
+      },
+      {
+        "title": "Buckeye Roll Goods Catalog",
+        "description": "Roll goods catalog for industrial fabrics, materials, and replacement cover fabrication needs.",
+        "file": "/catalogs/Buckeye-ROLL-GOODS-CATALOG.pdf",
+        "keywords": "roll goods fabrics materials industrial fabric covers textile replacement fabrication padding model number"
+      }
+    ]
+  },
+  "makeModelPage": {
+    "tipsTitle": "Tips for reading model numbers",
+    "manufacturers": [
+      {
+        "manufacturer": "AJAX",
+        "location": "The make and model number are located on the right hand side of the frame behind and below the pressing table."
+      },
+      {
+        "manufacturer": "ALLIANCE/AJAX",
+        "location": "The make and model number are located on the inside left press head support bar."
+      },
+      {
+        "manufacturer": "CISSELL",
+        "location": "Dry cleaning presses: the make and model are found on the right side of the frame underneath the pressing table. Steam Air Finishers: the information is found on the bottom back of the press base. Pants Toppers: the make and model are found on the top left side of the press frame."
+      },
+      {
+        "manufacturer": "FORENTA",
+        "location": "The model number on all Forenta pressing machines is found in the serial number. This information is located on the right side of the press, just below the press table. Be sure to write down the entire serial number."
+      },
+      {
+        "manufacturer": "HOFFMAN",
+        "location": "The make and model are located on the right side of the press just behind the pressing table."
+      },
+      {
+        "manufacturer": "SANKOSHA",
+        "location": "These are perhaps the easiest. Most of the information needed is on the front of the press frame in large bold numbers and letters, in plain view. What a concept!"
+      },
+      {
+        "manufacturer": "UNIPRESS",
+        "location": "On the shirt body units, the make and model is located in plain view, on the front top corner of the frame. It's on a gray panel, and even lists the Unipress part numbers for the appropriate pads, covers and air bags. On all other presses, the make and model is located on the right side of the press just under the pressing table, on the box where the controls are located."
+      }
+    ],
+    "heroDescription": "Use these tips to locate the make and model number before ordering pads, covers, and other press textiles.",
+    "tableTitle": "Manufacturer lookup guide",
+    "introTitle": "How to find the MAKE and MODEL number",
+    "introParagraphs": [
+      "Make and model number... make and model number. How many times have you heard this when ordering press pads and covers?",
+      "It's true, to order the correct pad and cover for your customer, we must have the make and model number. Here are some tips to help you find this crucial information and make ordering the correct textiles for the pressing machine mistake free."
+    ],
+    "tipsIntro": "Now that you know where to look for the needed information, here are some tips to make reading the model number much easier.",
+    "tips": [
+      {
+        "title": "Carry a small flashlight",
+        "description": "This will help shed some light on the needed information."
+      },
+      {
+        "title": "Bring a white crayon",
+        "description": "You can rub the crayon over the letters and numbers, making them much easier to read."
+      },
+      {
+        "title": "Have a tape measure with you",
+        "description": "If the make and model numbers are not available, you can measure the buck of the press and match up the correct pad and cover."
+      },
+      {
+        "title": "Keep craft paper available",
+        "description": "This will allow you to make a tracing, or template, of the press buck if the model number is missing or the press has been rebuilt."
+      }
+    ],
+    "heroTitle": "How to Find Make and Model Numbers"
+  },
   "resourceLinks": [
     {
       "title": "Product Catalogs",
@@ -949,174 +1116,7 @@
   },
   "resourcesPage": {
     "heroTitle": "Resources",
-    "heroDescription": "A resources page keeps catalogs, videos, and ordering help organized instead of scattering them across the site."
-  },
-  "catalogsPage": {
-    "heroTitle": "Product Catalogs",
-    "heroDescription": "Search catalog PDFs by model number, equipment type, product category, or keyword.",
-    "searchPlaceholder": "Search model number, product, machine, or keyword",
-    "noResultsText": "No catalogs matched your search. Try a different model number, machine name, or product keyword.",
-    "catalogs": [
-      {
-        "title": "Buckeye Dry Cleaning Pads & Covers 2026",
-        "description": "Dry cleaning pads and covers catalog for replacement pads, covers, and finishing equipment products.",
-        "file": "/catalogs/Buckeye-DRY-CLEANING-PADS-COVERS-2026.pdf",
-        "keywords": "dry cleaning pads covers press bucks steam air finishers pants toppers shirt units Ajax Cissell Forenta Sankosha Unipress legger utility press replacement pads model number"
-      },
-      {
-        "title": "Buckeye Misc Accessories for Dry Cleaning Industry 2026",
-        "description": "Accessories catalog for dry cleaning industry replacement parts and support products.",
-        "file": "/catalogs/Buckeye-MISC-ACCESSORIES-FOR-DRY-CLEANING-INDUSTRY-CATALOG-2026.pdf",
-        "keywords": "misc accessories dry cleaning industry replacement accessories parts supplies press pads covers head plates model number"
-      },
-      {
-        "title": "Buckeye Roll Goods Catalog",
-        "description": "Roll goods catalog for industrial fabrics, materials, and replacement cover fabrication needs.",
-        "file": "/catalogs/Buckeye-ROLL-GOODS-CATALOG.pdf",
-        "keywords": "roll goods fabrics materials industrial fabric covers textile replacement fabrication padding model number"
-      }
-    ]
-  },
-  "makeModelPage": {
-    "heroTitle": "How to Find Make and Model Numbers",
-    "heroDescription": "Use these tips to locate the make and model number before ordering pads, covers, and other press textiles.",
-    "introTitle": "How to find the MAKE and MODEL number",
-    "introParagraphs": [
-      "Make and model number... make and model number. How many times have you heard this when ordering press pads and covers?",
-      "It's true, to order the correct pad and cover for your customer, we must have the make and model number. Here are some tips to help you find this crucial information and make ordering the correct textiles for the pressing machine mistake free."
-    ],
-    "tableTitle": "Manufacturer lookup guide",
-    "manufacturers": [
-      {
-        "manufacturer": "AJAX",
-        "location": "The make and model number are located on the right hand side of the frame behind and below the pressing table."
-      },
-      {
-        "manufacturer": "ALLIANCE/AJAX",
-        "location": "The make and model number are located on the inside left press head support bar."
-      },
-      {
-        "manufacturer": "CISSELL",
-        "location": "Dry cleaning presses: the make and model are found on the right side of the frame underneath the pressing table. Steam Air Finishers: the information is found on the bottom back of the press base. Pants Toppers: the make and model are found on the top left side of the press frame."
-      },
-      {
-        "manufacturer": "FORENTA",
-        "location": "The model number on all Forenta pressing machines is found in the serial number. This information is located on the right side of the press, just below the press table. Be sure to write down the entire serial number."
-      },
-      {
-        "manufacturer": "HOFFMAN",
-        "location": "The make and model are located on the right side of the press just behind the pressing table."
-      },
-      {
-        "manufacturer": "SANKOSHA",
-        "location": "These are perhaps the easiest. Most of the information needed is on the front of the press frame in large bold numbers and letters, in plain view. What a concept!"
-      },
-      {
-        "manufacturer": "UNIPRESS",
-        "location": "On the shirt body units, the make and model is located in plain view, on the front top corner of the frame. It's on a gray panel, and even lists the Unipress part numbers for the appropriate pads, covers and air bags. On all other presses, the make and model is located on the right side of the press just under the pressing table, on the box where the controls are located."
-      }
-    ],
-    "tipsTitle": "Tips for reading model numbers",
-    "tipsIntro": "Now that you know where to look for the needed information, here are some tips to make reading the model number much easier.",
-    "tips": [
-      {
-        "title": "Carry a small flashlight",
-        "description": "This will help shed some light on the needed information."
-      },
-      {
-        "title": "Bring a white crayon",
-        "description": "You can rub the crayon over the letters and numbers, making them much easier to read."
-      },
-      {
-        "title": "Have a tape measure with you",
-        "description": "If the make and model numbers are not available, you can measure the buck of the press and match up the correct pad and cover."
-      },
-      {
-        "title": "Keep craft paper available",
-        "description": "This will allow you to make a tracing, or template, of the press buck if the model number is missing or the press has been rebuilt."
-      }
-    ]
-  },
-  "installationVideosPage": {
-    "heroTitle": "Installation Videos",
-    "heroDescription": "Training and installation videos for dry cleaning, laundry, and finishing equipment products.",
-    "videos": [
-      {
-        "title": "FH Bonn Sankosha LP 190 Installation Step 1",
-        "youtubeId": "0wj0YpDRr6c",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha LP 190 Installation Step 2",
-        "youtubeId": "-K8l-l-Wbwk",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha LP 190 Installation Step 3",
-        "youtubeId": "_5NciPnhyAo",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #1",
-        "youtubeId": "WcSvEqDmJjM",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #2",
-        "youtubeId": "vEbbq0j2Fis",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #3",
-        "youtubeId": "7P1wDjNWOeg",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Install #4",
-        "youtubeId": "pbeP7DUz8-k",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #5",
-        "youtubeId": "1FmKdxrLfxQ",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Sankosha Dry Cleaning Legger Pad Install #6",
-        "youtubeId": "7iFKW8cFJl8",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Unipress LS Install Step 1",
-        "youtubeId": "fyTZkbGtwV0",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Unipress LS Install Step 2",
-        "youtubeId": "KGMcSNkXPS8",
-        "description": ""
-      },
-      {
-        "title": "Unipress LS Install Step 3",
-        "youtubeId": "i6Eh6f7ixtI",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Unipress LS Install Step 4",
-        "youtubeId": "Y42Vzx0uijk",
-        "description": ""
-      },
-      {
-        "title": "FH Bonn Dry Cleaning Pants Topper Installation",
-        "youtubeId": "s1k0rASqoAY",
-        "description": ""
-      },
-      {
-        "title": "FH BONN RED PRO-FINISH Pad Installation",
-        "youtubeId": "umiOeSmexzg",
-        "description": ""
-      }
-    ]
+    "heroDescription": "Find everything you need in one place. Browse our catalogs, view helpful videos, and access ordering information to make choosing the right products simple."
   },
   "navLinks": [
     {
@@ -1223,7 +1223,7 @@
     "tagline": "Industrial Press Pads & Covers",
     "hours": "Monday – Friday 8:00 AM – 5:00 PM EST",
     "officePhone": "",
-    "email": "customerservice@fhbonn.com",
+    "email": "customerservice@buckeyepads.com",
     "logoAlt": "Buckeye Pads and Covers"
   },
   "home": {
@@ -1237,7 +1237,7 @@
       "title": "Industrial Press Pads & Covers for Dry Cleaning and Laundry Equipment",
       "primaryCtaHref": "/request-quote",
       "image": "/images/logo-current.png",
-      "description": "A cleaner, more professional experience for distributors, equipment manufacturers, and commercial operators who need the right fit fast.",
+      "description": "Built for distributors, equipment manufacturers, and commercial operators who need dependable products, clear ordering, and the right fit fast.",
       "stats": [
         {
           "value": "3000+",
