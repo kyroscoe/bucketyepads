@@ -2,8 +2,8 @@ import Link from "next/link";
 import { Container } from "@/components/Container";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
-import { IndustryCard, ProductCard } from "@/components/CardGrid";
-import { industries, productCategories, siteData } from "@/components/site-data";
+import { ProductCard } from "@/components/CardGrid";
+import { productCategories, siteData } from "@/components/site-data";
 
 export default function HomePage() {
   const { home } = siteData;
@@ -44,22 +44,6 @@ export default function HomePage() {
           <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {productCategories.map((item) => (
               <ProductCard key={item.slug} item={item} />
-            ))}
-          </div>
-        </Container>
-      </section>
-
-      <section className="py-20">
-        <Container>
-          <SectionHeading
-            eyebrow={home.industries.eyebrow}
-            title={home.industries.title}
-            description={home.industries.description}
-          />
-
-          <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-            {industries.map((item) => (
-              <IndustryCard key={item.name} item={item} />
             ))}
           </div>
         </Container>
