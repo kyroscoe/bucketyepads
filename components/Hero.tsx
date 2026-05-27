@@ -47,7 +47,7 @@ export function Hero() {
         </div>
         <div className="relative">
           {hero.imageText ? (
-            <p className="mb-4 text-center text-sm font-bold uppercase tracking-[0.2em] text-red-100 lg:text-left">
+            <p className="mb-5 max-w-xl text-center text-base font-semibold leading-7 text-zinc-200 lg:text-left">
               {hero.imageText}
             </p>
           ) : null}
