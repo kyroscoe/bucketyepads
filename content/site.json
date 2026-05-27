@@ -1171,22 +1171,22 @@
     {
       "name": "Commercial Dry Cleaning",
       "description": "Pads, covers, and accessories for presses, finishers, and toppers used in dry cleaning operations.",
-      "image": "/images/industries/dry-cleaning.svg"
+      "image": ""
     },
     {
       "name": "Commercial Laundry",
       "description": "Durable products for high-volume laundry finishing environments.",
-      "image": "/images/industries/laundry.svg"
+      "image": ""
     },
     {
       "name": "Equipment Manufacturers",
       "description": "OEM production support for manufacturers that need consistent quality and repeatable fit.",
-      "image": "/images/industries/oem.svg"
+      "image": ""
     },
     {
       "name": "Industrial Textile Fabrication",
       "description": "Contract sewing and specialty textile work for industrial applications.",
-      "image": "/images/industries/textile.svg"
+      "image": ""
     }
   ],
   "aboutPage": {
