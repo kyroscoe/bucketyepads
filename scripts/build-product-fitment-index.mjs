@@ -82,6 +82,24 @@ function compactPartNumber(value) {
   return value.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
 }
 
+function compactCodeTokens(value) {
+  const prefixedAlternates = [
+    ...value.matchAll(/\b([a-zA-Z]+)-?(\d+)\s+or\s+(\d+)\b/g),
+  ].map((match) => compactPartNumber(`${match[1]}-${match[3]}`));
+
+  return [
+    ...new Set(
+      [
+        ...value
+        .split(/\bor\b|[\s,;()/]+/i)
+        .map((token) => compactPartNumber(token))
+        .filter((token) => token.length > 1),
+        ...prefixedAlternates,
+      ],
+    ),
+  ];
+}
+
 function splitManufacturers(value) {
   return value
     .split("/")
@@ -132,14 +150,17 @@ function rowToRecords(headers, values, rowNumber) {
     const searchValues = [
       record.partNumber,
       compactPartNumber(record.partNumber),
+      ...compactCodeTokens(record.partNumber),
       record.productType,
       record.material,
       manufacturer,
       record.manufacturer,
       record.equipmentModel,
       compactPartNumber(record.equipmentModel),
+      ...compactCodeTokens(record.equipmentModel),
       record.buckSize,
       record.application,
+      ...compactCodeTokens(record.application),
       record.section,
       record.catalogTitle,
       record.notes,

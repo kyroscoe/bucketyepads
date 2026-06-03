@@ -41,6 +41,10 @@ function uniqueValues(fitments: ProductFitment[], key: keyof ProductFitment) {
   ).sort((a, b) => a.localeCompare(b));
 }
 
+function compactSearchText(value: string) {
+  return value.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
+}
+
 function searchTermMatches(searchText: string, term: string) {
   if (/^\d+$/.test(term)) {
     return searchText.split(" ").includes(term);
@@ -57,6 +61,8 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
     () => normalizeSearchText(query).split(" ").filter(Boolean),
     [query],
   );
+  const compactQuery = useMemo(() => compactSearchText(query), [query]);
+  const isCodeSearch = /[-_/]/.test(query);
 
   const productTypes = useMemo(
     () => ["All", ...uniqueValues(fitments, "productType")],
@@ -71,11 +77,20 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
 
   const filteredFitments = useMemo(() => {
     return fitments.filter((fitment) => {
-      const matchesQuery =
-        normalizedTerms.length === 0 ||
-        normalizedTerms.every((term) =>
-          searchTermMatches(fitment.searchText, term),
-        );
+      let matchesQuery = normalizedTerms.length === 0;
+
+      if (!matchesQuery && isCodeSearch && compactQuery.length > 1) {
+        matchesQuery = fitment.searchText.split(" ").includes(compactQuery);
+      }
+
+      if (!matchesQuery && !isCodeSearch) {
+        matchesQuery =
+          (compactQuery.length > 3 && fitment.searchText.includes(compactQuery)) ||
+          normalizedTerms.every((term) =>
+            searchTermMatches(fitment.searchText, term),
+          );
+      }
+
       const matchesProductType =
         productType === "All" || fitment.productType === productType;
       const matchesManufacturer =
@@ -83,7 +98,14 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
 
       return matchesQuery && matchesProductType && matchesManufacturer;
     });
-  }, [fitments, manufacturer, normalizedTerms, productType]);
+  }, [
+    compactQuery,
+    fitments,
+    isCodeSearch,
+    manufacturer,
+    normalizedTerms,
+    productType,
+  ]);
 
   const resultLabel =
     filteredFitments.length === 1
