@@ -1000,11 +1000,6 @@
   },
   "resourceLinks": [
     {
-      "title": "Product Catalogs",
-      "description": "Downloadable product catalog section with dry cleaning, laundry, roll goods, and accessories information.",
-      "href": "/resources/catalogs"
-    },
-    {
       "title": "Installation Videos",
       "description": "Training and product support content for customers and distributors.",
       "href": "/resources/installation-videos"
@@ -1136,6 +1131,10 @@
     {
       "href": "/about",
       "label": "About"
+    },
+    {
+      "href": "/catalogs",
+      "label": "Catalogs"
     },
     {
       "href": "/resources",
