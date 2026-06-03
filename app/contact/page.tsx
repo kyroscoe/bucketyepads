@@ -29,6 +29,7 @@ export default function ContactPage() {
               <p>{company.hours}</p>
             </div>
           </div>
+
           <QuoteForm />
         </Container>
       </section>

@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "catalog:index": "node scripts/build-catalog-search-index.mjs",
-    "prebuild": "npm run catalog:index",
+    "fitments:index": "node scripts/build-product-fitment-index.mjs",
+    "prebuild": "npm run catalog:index && npm run fitments:index",
     "build": "next build",
     "start": "next start",
     "lint": "next lint"

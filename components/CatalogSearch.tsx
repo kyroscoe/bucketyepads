@@ -20,6 +20,7 @@ type CatalogSearchProps = {
   searchIndex: CatalogSearchIndexItem[];
   placeholder: string;
   noResultsText: string;
+  showSearch?: boolean;
 };
 
 export function CatalogSearch({
@@ -27,6 +28,7 @@ export function CatalogSearch({
   searchIndex,
   placeholder,
   noResultsText,
+  showSearch = true,
 }: CatalogSearchProps) {
   const [query, setQuery] = useState("");
   const normalizedQuery = query.trim().toLowerCase();
@@ -36,7 +38,7 @@ export function CatalogSearch({
   );
 
   const filteredCatalogs = useMemo(() => {
-    if (!normalizedQuery) {
+    if (!showSearch || !normalizedQuery) {
       return catalogs;
     }
 
@@ -55,25 +57,29 @@ export function CatalogSearch({
         .split(/\s+/)
         .every((term) => searchableText.includes(term));
     });
-  }, [catalogs, normalizedQuery, searchTextByFile]);
+  }, [catalogs, normalizedQuery, searchTextByFile, showSearch]);
 
   return (
     <div>
-      <label className="relative block">
-        <span className="sr-only">Search catalogs</span>
-        <Search
-          aria-hidden="true"
-          className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
-        />
-        <input
-          value={query}
-          onChange={(event) => setQuery(event.target.value)}
-          placeholder={placeholder}
-          className="w-full rounded-2xl border border-slate-300 bg-white py-4 pl-12 pr-4 text-base font-semibold text-slate-900 outline-none ring-brand-red transition placeholder:text-slate-400 focus:ring-2"
-        />
-      </label>
+      {showSearch ? (
+        <label className="relative block">
+          <span className="sr-only">Search catalogs</span>
+          <Search
+            aria-hidden="true"
+            className="pointer-events-none absolute left-4 top-1/2 h-5 w-5 -translate-y-1/2 text-slate-400"
+          />
+          <input
+            value={query}
+            onChange={(event) => setQuery(event.target.value)}
+            placeholder={placeholder}
+            className="w-full rounded-2xl border border-slate-300 bg-white py-4 pl-12 pr-4 text-base font-semibold text-slate-900 outline-none ring-brand-red transition placeholder:text-slate-400 focus:ring-2"
+          />
+        </label>
+      ) : null}
 
-      <div className="mt-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      <div
+        className={`${showSearch ? "mt-10" : ""} grid gap-6 md:grid-cols-2 xl:grid-cols-3`}
+      >
         {filteredCatalogs.map((catalog) => (
           <article
             key={catalog.file}
@@ -106,7 +112,7 @@ export function CatalogSearch({
         ))}
       </div>
 
-      {filteredCatalogs.length === 0 ? (
+      {showSearch && filteredCatalogs.length === 0 ? (
         <div className="mt-10 rounded-[2rem] border border-slate-200 bg-white p-8 text-center shadow-card">
           <p className="text-sm font-semibold leading-7 text-slate-600">
             {noResultsText}

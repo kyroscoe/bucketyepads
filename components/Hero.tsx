@@ -52,13 +52,13 @@ export function Hero() {
             </p>
           ) : null}
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-white/15 to-transparent blur-2xl" />
-          <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
+          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
             <Image
               src={hero.image}
               alt={hero.imageAlt}
-              width={900}
-              height={680}
-              className="h-auto w-full rounded-[1.4rem]"
+              fill
+              sizes="(min-width: 1024px) 45vw, 100vw"
+              className="rounded-[1.4rem] object-cover object-[58%_38%]"
             />
           </div>
         </div>
