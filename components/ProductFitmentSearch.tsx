@@ -45,12 +45,114 @@ function compactSearchText(value: string) {
   return value.replace(/[^a-zA-Z0-9]+/g, "").toLowerCase();
 }
 
-function searchTermMatches(searchText: string, term: string) {
+function fieldTokens(value: string) {
+  return normalizeSearchText(value).split(" ").filter(Boolean);
+}
+
+function compactFieldTokens(value: string) {
+  return [
+    compactSearchText(value),
+    ...fieldTokens(value).map((token) => compactSearchText(token)),
+  ].filter(Boolean);
+}
+
+function isShortCodeTerm(term: string) {
+  return /^[a-z]+$/.test(term) && term.length <= 3;
+}
+
+function codeTermMatches(value: string, term: string) {
+  const tokens = fieldTokens(value);
+  const compactTokens = compactFieldTokens(value);
+
   if (/^\d+$/.test(term)) {
-    return searchText.split(" ").includes(term);
+    return tokens.includes(term) || compactTokens.includes(term);
   }
 
-  return searchText.includes(term);
+  if (isShortCodeTerm(term)) {
+    return (
+      tokens.includes(term) ||
+      compactTokens.some((token) => token.startsWith(term))
+    );
+  }
+
+  return (
+    tokens.includes(term) ||
+    compactTokens.includes(term) ||
+    compactTokens.some((token) => token.startsWith(term))
+  );
+}
+
+function textTermMatches(value: string, term: string) {
+  if (/^\d+$/.test(term) || isShortCodeTerm(term)) {
+    return codeTermMatches(value, term);
+  }
+
+  return normalizeSearchText(value).includes(term);
+}
+
+function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
+  if (terms.length === 0) {
+    return 0;
+  }
+
+  const compactQuery = compactSearchText(query);
+  const primaryFields = [
+    fitment.partNumber,
+    fitment.equipmentModel,
+    fitment.manufacturer,
+  ];
+  const secondaryFields = [
+    fitment.productType,
+    fitment.material,
+    fitment.buckSize,
+    fitment.application,
+  ];
+  const supportingFields = [fitment.section, fitment.notes, fitment.catalogTitle];
+
+  const allTermsMatch = terms.every((term) => {
+    const primaryMatch = primaryFields.some((value) => codeTermMatches(value, term));
+    const secondaryMatch = secondaryFields.some((value) => textTermMatches(value, term));
+    const supportingMatch =
+      !isShortCodeTerm(term) &&
+      supportingFields.some((value) => textTermMatches(value, term));
+
+    return primaryMatch || secondaryMatch || supportingMatch;
+  });
+
+  if (!allTermsMatch) {
+    return -1;
+  }
+
+  let score = 0;
+
+  for (const value of [fitment.partNumber, fitment.equipmentModel]) {
+    const compactValue = compactSearchText(value);
+    const tokens = fieldTokens(value);
+
+    if (compactValue === compactQuery) {
+      score += 1000;
+    } else if (tokens.includes(compactQuery)) {
+      score += 900;
+    } else if (compactValue.startsWith(compactQuery)) {
+      score += 800;
+    }
+  }
+
+  if (fieldTokens(fitment.manufacturer).includes(compactQuery)) {
+    score += 650;
+  }
+
+  for (const term of terms) {
+    if (primaryFields.some((value) => codeTermMatches(value, term))) {
+      score += 250;
+    } else if (secondaryFields.some((value) => textTermMatches(value, term))) {
+      score += 90;
+    } else {
+      score += 20;
+    }
+  }
+
+  return score;
 }
 
 export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
@@ -61,8 +163,6 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
     () => normalizeSearchText(query).split(" ").filter(Boolean),
     [query],
   );
-  const compactQuery = useMemo(() => compactSearchText(query), [query]);
-  const isCodeSearch = /[-_/]/.test(query);
 
   const productTypes = useMemo(
     () => ["All", ...uniqueValues(fitments, "productType")],
@@ -76,35 +176,31 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
     normalizedTerms.length > 0 || productType !== "All" || manufacturer !== "All";
 
   const filteredFitments = useMemo(() => {
-    return fitments.filter((fitment) => {
-      let matchesQuery = normalizedTerms.length === 0;
+    return fitments
+      .map((fitment) => ({
+        fitment,
+        score:
+          normalizedTerms.length === 0
+            ? 0
+            : scoreFitment(fitment, query, normalizedTerms),
+      }))
+      .filter(({ fitment, score }) => {
+        const matchesQuery = normalizedTerms.length === 0 || score >= 0;
+        const matchesProductType =
+          productType === "All" || fitment.productType === productType;
+        const matchesManufacturer =
+          manufacturer === "All" || fitment.manufacturer === manufacturer;
 
-      if (!matchesQuery && isCodeSearch && compactQuery.length > 1) {
-        matchesQuery = fitment.searchText.split(" ").includes(compactQuery);
-      }
-
-      if (!matchesQuery && !isCodeSearch) {
-        matchesQuery =
-          (compactQuery.length > 3 && fitment.searchText.includes(compactQuery)) ||
-          normalizedTerms.every((term) =>
-            searchTermMatches(fitment.searchText, term),
-          );
-      }
-
-      const matchesProductType =
-        productType === "All" || fitment.productType === productType;
-      const matchesManufacturer =
-        manufacturer === "All" || fitment.manufacturer === manufacturer;
-
-      return matchesQuery && matchesProductType && matchesManufacturer;
-    });
+        return matchesQuery && matchesProductType && matchesManufacturer;
+      })
+      .sort((a, b) => b.score - a.score)
+      .map(({ fitment }) => fitment);
   }, [
-    compactQuery,
     fitments,
-    isCodeSearch,
     manufacturer,
     normalizedTerms,
     productType,
+    query,
   ]);
 
   const resultLabel =
