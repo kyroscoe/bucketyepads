@@ -1,7 +1,7 @@
 "use client";
 
-import { useDeferredValue, useMemo, useState } from "react";
-import { FileText, Search } from "lucide-react";
+import { useMemo, useState } from "react";
+import { Search } from "lucide-react";
 
 type ProductFitment = {
   id: string;
@@ -25,6 +25,8 @@ type ProductFitment = {
 type ProductFitmentSearchProps = {
   fitments: ProductFitment[];
 };
+
+const maxVisibleResults = 150;
 
 function normalizeSearchText(value: string) {
   return value
@@ -65,6 +67,10 @@ function isCodeLikeQuery(terms: string[]) {
     terms.length > 0 &&
     terms.every((term) => /^[a-z0-9]+$/.test(term) && term.length <= 4)
   );
+}
+
+function isExactCodeQuery(query: string) {
+  return /[a-zA-Z]+[-_/]\d+|\d+[-_/][a-zA-Z]+/.test(query);
 }
 
 function hasCodeShape(value: string) {
@@ -108,6 +114,7 @@ function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
   }
 
   const compactQuery = compactSearchText(query);
+  const exactCodeQuery = isExactCodeQuery(query);
   const codeLikeQuery = isCodeLikeQuery(terms);
   const primaryFields = [
     fitment.partNumber,
@@ -121,6 +128,16 @@ function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
     fitment.application,
   ];
   const supportingFields = [fitment.section, fitment.notes, fitment.catalogTitle];
+
+  if (exactCodeQuery) {
+    const exactCodeMatch = primaryFields.some((value) =>
+      compactFieldTokens(value).includes(compactQuery),
+    );
+
+    if (!exactCodeMatch) {
+      return -1;
+    }
+  }
 
   const allTermsMatch = terms.every((term) => {
     const primaryMatch = primaryFields.some((value) => codeTermMatches(value, term));
@@ -188,10 +205,9 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
   const [query, setQuery] = useState("");
   const [productType, setProductType] = useState("All");
   const [manufacturer, setManufacturer] = useState("All");
-  const deferredQuery = useDeferredValue(query);
   const normalizedTerms = useMemo(
-    () => normalizeSearchText(deferredQuery).split(" ").filter(Boolean),
-    [deferredQuery],
+    () => normalizeSearchText(query).split(" ").filter(Boolean),
+    [query],
   );
 
   const productTypes = useMemo(
@@ -212,7 +228,7 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
         score:
           normalizedTerms.length === 0
             ? 0
-            : scoreFitment(fitment, deferredQuery, normalizedTerms),
+            : scoreFitment(fitment, query, normalizedTerms),
       }))
       .filter(({ fitment, score }) => {
         const matchesQuery = normalizedTerms.length === 0 || score >= 0;
@@ -230,8 +246,10 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
     manufacturer,
     normalizedTerms,
     productType,
-    deferredQuery,
+    query,
   ]);
+  const visibleFitments = filteredFitments.slice(0, maxVisibleResults);
+  const hasHiddenResults = filteredFitments.length > visibleFitments.length;
 
   const resultLabel =
     filteredFitments.length === 1
@@ -294,19 +312,18 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
 
           {filteredFitments.length > 0 ? (
             <div className="mt-8 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-card">
-              <div className="hidden grid-cols-[160px_180px_1fr_180px_140px] gap-4 border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-black uppercase text-slate-500 lg:grid">
+              <div className="hidden grid-cols-[160px_180px_1fr_180px] gap-4 border-b border-slate-200 bg-slate-50 px-5 py-3 text-xs font-black uppercase text-slate-500 lg:grid">
                 <span>Part</span>
                 <span>Type</span>
                 <span>Fits</span>
                 <span>Buck Size</span>
-                <span>Catalog</span>
               </div>
 
               <div className="divide-y divide-slate-200">
-                {filteredFitments.map((fitment) => (
+                {visibleFitments.map((fitment) => (
                   <article
                     key={fitment.id}
-                    className="grid gap-4 px-5 py-5 lg:grid-cols-[160px_180px_1fr_180px_140px] lg:items-center"
+                    className="grid gap-4 px-5 py-5 lg:grid-cols-[160px_180px_1fr_180px] lg:items-center"
                   >
                     <div>
                       <p className="text-base font-black text-brand-navy">
@@ -343,20 +360,16 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
                     <p className="text-sm font-bold text-slate-800">
                       {fitment.buckSize}
                     </p>
-
-                    <a
-                      href={`${fitment.catalogFile}#page=${fitment.catalogPage}`}
-                      target="_blank"
-                      rel="noreferrer"
-                      className="inline-flex items-center gap-2 text-sm font-bold text-brand-red transition hover:text-brand-orange"
-                    >
-                      <FileText aria-hidden="true" className="h-4 w-4" />
-                      Page {fitment.catalogPage}
-                    </a>
                   </article>
                 ))}
               </div>
             </div>
+          ) : null}
+          {hasHiddenResults ? (
+            <p className="mt-4 text-sm font-semibold text-slate-600">
+              Showing the first {visibleFitments.length} matches. Keep typing or
+              use the filters to narrow the results.
+            </p>
           ) : null}
         </>
       ) : null}
