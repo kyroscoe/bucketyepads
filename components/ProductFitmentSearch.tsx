@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { useDeferredValue, useMemo, useState } from "react";
 import { FileText, Search } from "lucide-react";
 
 type ProductFitment = {
@@ -60,9 +60,21 @@ function isShortCodeTerm(term: string) {
   return /^[a-z]+$/.test(term) && term.length <= 3;
 }
 
+function isCodeLikeQuery(terms: string[]) {
+  return (
+    terms.length > 0 &&
+    terms.every((term) => /^[a-z0-9]+$/.test(term) && term.length <= 4)
+  );
+}
+
+function hasCodeShape(value: string) {
+  return /[-_/]/.test(value) || value.trim() === value.trim().toUpperCase();
+}
+
 function codeTermMatches(value: string, term: string) {
   const tokens = fieldTokens(value);
   const compactTokens = compactFieldTokens(value);
+  const looksLikeCode = hasCodeShape(value);
 
   if (/^\d+$/.test(term)) {
     return tokens.includes(term) || compactTokens.includes(term);
@@ -70,8 +82,8 @@ function codeTermMatches(value: string, term: string) {
 
   if (isShortCodeTerm(term)) {
     return (
-      tokens.includes(term) ||
-      compactTokens.some((token) => token.startsWith(term))
+      (tokens.includes(term) && looksLikeCode) ||
+      (looksLikeCode && compactSearchText(value).startsWith(term))
     );
   }
 
@@ -96,11 +108,12 @@ function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
   }
 
   const compactQuery = compactSearchText(query);
+  const codeLikeQuery = isCodeLikeQuery(terms);
   const primaryFields = [
     fitment.partNumber,
     fitment.equipmentModel,
-    fitment.manufacturer,
   ];
+  const manufacturerFields = [fitment.manufacturer];
   const secondaryFields = [
     fitment.productType,
     fitment.material,
@@ -111,12 +124,20 @@ function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
 
   const allTermsMatch = terms.every((term) => {
     const primaryMatch = primaryFields.some((value) => codeTermMatches(value, term));
-    const secondaryMatch = secondaryFields.some((value) => textTermMatches(value, term));
+    const manufacturerMatch = manufacturerFields.some((value) =>
+      isShortCodeTerm(term)
+        ? fieldTokens(value).includes(term)
+        : codeTermMatches(value, term),
+    );
+    const secondaryMatch =
+      !codeLikeQuery &&
+      secondaryFields.some((value) => textTermMatches(value, term));
     const supportingMatch =
+      !codeLikeQuery &&
       !isShortCodeTerm(term) &&
       supportingFields.some((value) => textTermMatches(value, term));
 
-    return primaryMatch || secondaryMatch || supportingMatch;
+    return primaryMatch || manufacturerMatch || secondaryMatch || supportingMatch;
   });
 
   if (!allTermsMatch) {
@@ -138,13 +159,21 @@ function scoreFitment(fitment: ProductFitment, query: string, terms: string[]) {
     }
   }
 
-  if (fieldTokens(fitment.manufacturer).includes(compactQuery)) {
+  if (
+    fieldTokens(fitment.manufacturer).includes(compactQuery) ||
+    (!isShortCodeTerm(compactQuery) &&
+      compactFieldTokens(fitment.manufacturer).some((token) =>
+        token.startsWith(compactQuery),
+      ))
+  ) {
     score += 650;
   }
 
   for (const term of terms) {
     if (primaryFields.some((value) => codeTermMatches(value, term))) {
       score += 250;
+    } else if (manufacturerFields.some((value) => codeTermMatches(value, term))) {
+      score += 180;
     } else if (secondaryFields.some((value) => textTermMatches(value, term))) {
       score += 90;
     } else {
@@ -159,9 +188,10 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
   const [query, setQuery] = useState("");
   const [productType, setProductType] = useState("All");
   const [manufacturer, setManufacturer] = useState("All");
+  const deferredQuery = useDeferredValue(query);
   const normalizedTerms = useMemo(
-    () => normalizeSearchText(query).split(" ").filter(Boolean),
-    [query],
+    () => normalizeSearchText(deferredQuery).split(" ").filter(Boolean),
+    [deferredQuery],
   );
 
   const productTypes = useMemo(
@@ -182,7 +212,7 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
         score:
           normalizedTerms.length === 0
             ? 0
-            : scoreFitment(fitment, query, normalizedTerms),
+            : scoreFitment(fitment, deferredQuery, normalizedTerms),
       }))
       .filter(({ fitment, score }) => {
         const matchesQuery = normalizedTerms.length === 0 || score >= 0;
@@ -200,7 +230,7 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
     manufacturer,
     normalizedTerms,
     productType,
-    query,
+    deferredQuery,
   ]);
 
   const resultLabel =
@@ -315,7 +345,7 @@ export function ProductFitmentSearch({ fitments }: ProductFitmentSearchProps) {
                     </p>
 
                     <a
-                      href={fitment.catalogFile}
+                      href={`${fitment.catalogFile}#page=${fitment.catalogPage}`}
                       target="_blank"
                       rel="noreferrer"
                       className="inline-flex items-center gap-2 text-sm font-bold text-brand-red transition hover:text-brand-orange"
