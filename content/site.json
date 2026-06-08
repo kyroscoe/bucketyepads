@@ -373,7 +373,13 @@
     },
     {
       "state": "Indiana",
-      "distributors": []
+      "distributors": [
+        {
+          "name": "Indy Hanger and Supply",
+          "city": "Indianapolis",
+          "phone": "(855) 447-8775"
+        }
+      ]
     },
     {
       "state": "Iowa",
