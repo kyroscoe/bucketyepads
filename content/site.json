@@ -291,11 +291,6 @@
           "phone": "(770) 428-5545"
         },
         {
-          "name": "DBA Phenix Supply Company",
-          "city": "Decatur",
-          "phone": "(770) 981-2800"
-        },
-        {
           "name": "Fabriclean Supply of Atlanta",
           "city": "Decatur",
           "phone": "(770) 981-2800"
@@ -396,8 +391,8 @@
       "distributors": [
         {
           "name": "Fabriclean Supply of Kansas",
-          "city": "Wichita",
-          "phone": "(316) 529-8555"
+          "city": "Lenexa",
+          "phone": "913-492-1743"
         },
         {
           "name": "Midwest Conveyor",
@@ -432,7 +427,7 @@
         {
           "name": "Fabriclean Supply of Houston LP",
           "city": "Baton Rouge",
-          "phone": "(800) 442-7021"
+          "phone": "(225) 237-3045"
         }
       ]
     },
@@ -762,11 +757,6 @@
     {
       "state": "Tennessee",
       "distributors": [
-        {
-          "name": "Fabriclean Supply of Tennessee",
-          "city": "Knoxville",
-          "phone": "(865) 689-1221"
-        },
         {
           "name": "Fabriclean Supply of Tennessee",
           "city": "Nashville",
