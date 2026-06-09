@@ -126,11 +126,6 @@
           "name": "Mobile Solvent & Supply",
           "city": "Mobile",
           "phone": "(251) 675-9702"
-        },
-        {
-          "name": "Office Solutions",
-          "city": "Mobile",
-          "phone": "(251) 666-7204"
         }
       ]
     },
@@ -161,11 +156,6 @@
           "name": "Fabriclean Supply of Arkansas",
           "city": "Little Rock",
           "phone": "(501) 565-5288"
-        },
-        {
-          "name": "Nu Way Products Co",
-          "city": "West Memphis",
-          "phone": "(870) 735-4291"
         }
       ]
     },
@@ -503,11 +493,6 @@
       "state": "Missouri",
       "distributors": [
         {
-          "name": "IG Weingaertner & Sons",
-          "city": "St. Louis",
-          "phone": "(314) 831-8286"
-        },
-        {
           "name": "Universal Sewing Supply",
           "city": "St. Louis",
           "phone": "(314) 862-0800"
@@ -596,11 +581,6 @@
           "phone": "(828) 891-8871"
         },
         {
-          "name": "Leonard Automatics Inc",
-          "city": "Denver",
-          "phone": "(704) 483-9316"
-        },
-        {
           "name": "Weber Mechanical",
           "city": "Monroe",
           "phone": "(704) 282-4124"
@@ -653,11 +633,6 @@
           "name": "Hudson Equipment Inc",
           "city": "Hudson",
           "phone": "(330) 342-9900"
-        },
-        {
-          "name": "Machinex Corporation",
-          "city": "Cincinnati",
-          "phone": "(513) 771-4020"
         },
         {
           "name": "Moore Services",
@@ -870,11 +845,6 @@
           "name": "Colmac Industries",
           "city": "Colville",
           "phone": "(800) 926-5622"
-        },
-        {
-          "name": "Dynamic Sales and Services",
-          "city": "Kirkland",
-          "phone": "(425) 823-4300"
         }
       ]
     },
@@ -889,11 +859,6 @@
           "name": "Alliance Laundry Systems",
           "city": "Ripon",
           "phone": "(920) 748-3121"
-        },
-        {
-          "name": "Wausau Chemical Corporation",
-          "city": "Wausau",
-          "phone": "(715) 842-2285"
         }
       ]
     },
