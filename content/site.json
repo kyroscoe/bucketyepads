@@ -395,6 +395,11 @@
       "state": "Kentucky",
       "distributors": [
         {
+          "name": "Indy Hanger and Supply",
+          "phone": "(855) 447-8775",
+          "city": "Indianapolis"
+        },
+        {
           "name": "O'Dell Equipment Inc",
           "city": "Hays",
           "phone": "(502) 584-6100"
@@ -462,6 +467,11 @@
           "name": "Eagle Star Equipment",
           "city": "Troy",
           "phone": "(800) 482-3400"
+        },
+        {
+          "name": "Indy Hanger and Supply",
+          "phone": "(855) 447-8775",
+          "city": "Indianapolis"
         }
       ]
     },
@@ -633,6 +643,11 @@
           "name": "Hudson Equipment Inc",
           "city": "Hudson",
           "phone": "(330) 342-9900"
+        },
+        {
+          "phone": "(855) 447-8775",
+          "name": "Indy Hanger and Supply",
+          "city": "Indianapolis"
         },
         {
           "name": "Moore Services",
