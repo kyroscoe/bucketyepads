@@ -23,6 +23,19 @@ collections:
               - { label: Browser Title, name: title, widget: string }
               - { label: Search Description, name: description, widget: text }
 
+          - label: Promotion Popup
+            name: promotionPopup
+            widget: object
+            fields:
+              - { label: Show Popup, name: enabled, widget: boolean, default: false }
+              - { label: Eyebrow, name: eyebrow, widget: string, required: false }
+              - { label: Title, name: title, widget: string }
+              - { label: Message, name: description, widget: text }
+              - { label: Primary Button Label, name: primaryCtaLabel, widget: string }
+              - { label: Primary Button URL, name: primaryCtaHref, widget: string }
+              - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string, required: false }
+              - { label: Secondary Button URL, name: secondaryCtaHref, widget: string, required: false }
+
           - label: Navigation
             name: navLinks
             widget: list

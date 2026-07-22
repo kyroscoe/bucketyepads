@@ -3,6 +3,7 @@ import Script from 'next/script';
 import './globals.css';
 import { Header } from '@/components/Header';
 import { Footer } from '@/components/Footer';
+import { PromotionPopup } from '@/components/PromotionPopup';
 import { siteData } from '@/components/site-data';
 
 export const metadata: Metadata = {
@@ -17,6 +18,7 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
         <Header />
         {children}
         <Footer />
+        <PromotionPopup promotion={siteData.promotionPopup} />
         <Script src="https://identity.netlify.com/v1/netlify-identity-widget.js" />
         <Script id="netlify-identity-redirect">
           {`

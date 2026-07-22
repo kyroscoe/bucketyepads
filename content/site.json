@@ -1,4 +1,14 @@
 {
+  "promotionPopup": {
+    "enabled": false,
+    "eyebrow": "Current Promotion",
+    "title": "Ask about current specials",
+    "description": "Contact Buckeye Pads & Covers to learn about current promotions, product availability, and quote options.",
+    "primaryCtaLabel": "Request a Quote",
+    "primaryCtaHref": "/request-quote",
+    "secondaryCtaLabel": "Contact Us",
+    "secondaryCtaHref": "/contact"
+  },
   "quoteForm": {
     "action": "https://formspree.io/f/mzdqbqnp",
     "fields": {
