@@ -910,7 +910,7 @@
     ]
   },
   "promotionPopup": {
-    "enabled": true,
+    "enabled": false,
     "eyebrow": "Current Promotion",
     "title": "Ask about current specials",
     "description": "Contact Buckeye Pads & Covers to learn about current promotions, product availability, and quote options.",
