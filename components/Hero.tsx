@@ -1,10 +1,11 @@
 import Link from "next/link";
-import Image from "next/image";
 import { Container } from "@/components/Container";
+import { HeroMediaRotator } from "@/components/HeroMediaRotator";
 import { siteData } from "@/components/site-data";
 
 export function Hero() {
   const { hero } = siteData.home;
+  const promotion = siteData.promotionPopup;
 
   return (
     <section className="relative overflow-hidden bg-brand-navy text-white">
@@ -52,15 +53,7 @@ export function Hero() {
             </p>
           ) : null}
           <div className="absolute -inset-6 rounded-[2rem] bg-gradient-to-br from-white/15 to-transparent blur-2xl" />
-          <div className="relative aspect-[4/3] overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-3 shadow-2xl">
-            <Image
-              src={hero.image}
-              alt={hero.imageAlt}
-              fill
-              sizes="(min-width: 1024px) 45vw, 100vw"
-              className="rounded-[1.4rem] object-cover object-[58%_38%]"
-            />
-          </div>
+          <HeroMediaRotator hero={hero} promotion={promotion} />
         </div>
       </Container>
     </section>
