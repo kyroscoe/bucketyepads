@@ -910,15 +910,15 @@
     ]
   },
   "promotionPopup": {
-    "enabled": false,
-    "showInHero": true,
-    "eyebrow": "Current Promotion",
-    "title": "Ask about current specials",
-    "description": "Contact Buckeye Pads & Covers to learn about current promotions, product availability, and quote options.",
+    "enabled": true,
     "primaryCtaLabel": "Request a Quote",
-    "primaryCtaHref": "/request-quote",
+    "secondaryCtaHref": "/contact",
+    "eyebrow": "Current Promotion",
     "secondaryCtaLabel": "Contact Us",
-    "secondaryCtaHref": "/contact"
+    "title": "COOL HAND SPECIAL",
+    "primaryCtaHref": "/request-quote",
+    "showInHero": true,
+    "description": "Buy 5, get the 6th FREE!"
   },
   "makeModelPage": {
     "tipsTitle": "Tips for reading model numbers",
