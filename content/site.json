@@ -918,6 +918,8 @@
     "title": "COOL HAND SPECIAL",
     "primaryCtaHref": "/request-quote",
     "showInHero": true,
+    "image": "/images/uploads/cool-hand-special.png",
+    "imageAlt": "Cool Hand press pad covers",
     "description": "Buy 5, get the 6th FREE!"
   },
   "makeModelPage": {

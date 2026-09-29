@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useMemo, useState } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
 import { Megaphone, X } from 'lucide-react';
 
@@ -13,6 +14,8 @@ type PromotionPopupContent = {
   primaryCtaHref?: string;
   secondaryCtaLabel?: string;
   secondaryCtaHref?: string;
+  image?: string;
+  imageAlt?: string;
 };
 
 type PromotionPopupProps = {
@@ -85,6 +88,18 @@ export function PromotionPopup({ promotion }: PromotionPopupProps) {
         </div>
 
         <div className="px-6 py-6">
+          {promotion.image ? (
+            <div className="mb-6 flex justify-center rounded-md border border-slate-200 bg-slate-50 p-4">
+              <Image
+                src={promotion.image}
+                alt={promotion.imageAlt || promotion.title}
+                width={340}
+                height={440}
+                className="max-h-72 w-auto object-contain"
+              />
+            </div>
+          ) : null}
+
           <p className="text-base font-medium leading-7 text-slate-700">
             {promotion.description}
           </p>

@@ -36,6 +36,14 @@ collections:
               - { label: Primary Button URL, name: primaryCtaHref, widget: string }
               - { label: Secondary Button Label, name: secondaryCtaLabel, widget: string, required: false }
               - { label: Secondary Button URL, name: secondaryCtaHref, widget: string, required: false }
+              - label: Image
+                name: image
+                widget: image
+                required: false
+                media_library:
+                  config:
+                    multiple: false
+              - { label: Image Alt Text, name: imageAlt, widget: string, required: false }
 
           - label: Navigation
             name: navLinks
